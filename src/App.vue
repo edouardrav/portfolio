@@ -10,7 +10,7 @@ import Works from './components/Works.vue'
       <div class="name">
         <p>I'm</p>
         <p>EDOUARD</p>
-        <p class="stroke">RAV.</p>
+        <p class="rav stroke anim-slide">RAV.</p>
       </div>
       <div class="hi">
         <h1 class="anim-raise">Hi!</h1>

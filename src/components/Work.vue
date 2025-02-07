@@ -21,7 +21,7 @@ const props = defineProps({
 <style scoped>
 .work {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 
   h4 {
     font-size: 2em;
@@ -30,7 +30,9 @@ const props = defineProps({
   }
   p {
     margin: 0;
-    color: #222;
+    color: var(--lighter-green);
+    width: 200px;
+    font-weight: 300;
   }
 }
 </style>

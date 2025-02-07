@@ -3,7 +3,7 @@ import { onMounted, useTemplateRef } from 'vue'
 
 const whiteKeys = useTemplateRef('white')
 const blackKeys = useTemplateRef('black')
-const startDelay = 500
+const startDelay = 700
 const keyDelay = 80
 
 const animKeys = (keys) => {

@@ -1,5 +1,6 @@
 :root {
   --init-y: 80px;
+  --init-x: -60px;
   --ease: cubic-bezier(0, .66, .28, .99);
 }
 
@@ -21,6 +22,23 @@
   }
 }
 
+.anim-slide {
+  animation: animSlide 0.8s ease;
+}
+
+@keyframes animSlide {
+  0% {
+    transform: translateX(var(--init-x));
+  }
+
+  30% {
+    transform: translateX(var(--init-x));
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
 .anim-push {
   animation: animPush 0.3s linear;
 }
