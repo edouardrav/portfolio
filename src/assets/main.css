@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('./anim.css');
+
+:root {
+  --content-width: 900px;
+  --light-green: #00CEB5;
+  --darker-green: #3EBFA8;
+}
+
+body {
+  background-color: var(--darker-green);
+  font-family: 'Inter', sans-serif;
+  color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 6.5em;
+  margin-top: 0;
+}
+
+p {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+header {
+
+  background-color: var(--light-green);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.headwrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: var(--content-width);
+}
+
+.name {
+  margin: 200px 200px 20px 0;
+  font-weight: 800;
+
+  p {
+    margin-top: -10px;
+  }
+}
+
+.stroke {
+  color: var(--light-green);
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+  paint-order: stroke fill;
+  font-size: 108px;
+  letter-spacing: 3px;
+    margin-top: -20px !important;
+}
+
+.frames {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.hi {
+  margin-left: -33px;
+  transform: rotate(340deg);
+
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 45px 2px;
+    line-height: 1.05em;
+  }
+}
+
+
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: var(--content-width);
+  margin-top: 50px;
+  p {
+    font-size: 1.2em;
+  }
+  strong {
+    color: #cefff4;
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+  .techs {
+    margin-left: 325px;
+  }
+}

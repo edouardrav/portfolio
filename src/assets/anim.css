@@ -1,0 +1,45 @@
+:root {
+  --init-y: 80px;
+  --ease: cubic-bezier(0, .66, .28, .99);
+}
+
+.anim-raise {
+  animation: animRaise 0.8s var(--ease);
+}
+
+@keyframes animRaise {
+  0% {
+    transform: translateY(var(--init-y));
+  }
+
+  10% {
+    transform: translateY(var(--init-y));
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.anim-push {
+  animation: animPush 0.3s linear;
+}
+
+:root {
+  --pushing-height: 8px;
+}
+
+@keyframes animPush {
+  0% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(var(--pushing-height));
+  }
+  60% {
+    transform: translateY(var(--pushing-height));
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
