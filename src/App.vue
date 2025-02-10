@@ -12,7 +12,7 @@ import Icons from './components/Icons.vue'
       <div class="name">
         <p>I'm</p>
         <p>EDOUARD</p>
-        <p class="rav stroke anim-slide">RAV</p>
+        <p class="rav stroke anim-slide">rav.</p>
       </div>
       <div class="hi">
         <h1 class="anim-raise">Hi!</h1>

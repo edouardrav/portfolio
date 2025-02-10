@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('cabinet-grotesk.css');
 @import url('./anim.css');
 
 :root {
@@ -6,6 +7,8 @@
   --light-green: #00CEB5;
   --darker-green: #3EBFA8;
   --lighter-green: #cefff4;
+  --grey: #425E57;
+  --darker-grey: #2D3F3A;
 }
 
 #app {
@@ -13,10 +16,11 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /*border: 1px solid red;*/
 }
 
 body {
-  background-color: var(--darker-green);
+  background: linear-gradient(0.50turn, var(--darker-green), var(--light-green));
   font-family: 'Inter', sans-serif;
   color: white;
   margin: 0;
@@ -40,6 +44,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 380px;
 }
 
 .headwrap {
@@ -50,7 +55,7 @@ header {
 }
 
 .name {
-  margin: 200px 200px 20px 0;
+  margin: 160px 200px 20px 0;
   font-weight: 800;
 
   p {
@@ -59,18 +64,19 @@ header {
 }
 
 .rav {
-  color: var(--light-green);
-  font-size: 80px;
-  letter-spacing: 3px;
-  margin-top: -15px !important;
-  margin-left: 60px !important;
+  color: var(--grey);
+  font-size: 8em;
+  /*letter-spacing: 3px;*/
+  margin-top: -48px !important;
+  margin-left: 50px !important;
 }
 
 .stroke {
-  -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: white;
-  paint-order: stroke fill;
-  text-transform: uppercase;
+  /*-webkit-text-stroke-width: 5px;*/
+  /*-webkit-text-stroke-color: white;*/
+  /*paint-order: stroke fill;*/
+  /*text-transform: uppercase;*/
+  font-family: 'CabinetGrotesk-Bold';
 }
 
 .frames {
@@ -81,6 +87,7 @@ header {
 
 .hi {
   margin-left: -33px;
+  margin-top: -50px;
   transform: rotate(340deg);
   z-index: 100;
 
@@ -104,8 +111,9 @@ header {
   transform: rotate(340deg);
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 200px;
   margin-top: 50px;
+  /*border: 1px solid red;*/
 
   p {
     font-size: 1.2em;

@@ -60,7 +60,7 @@ onMounted(() => {
   }
 
   .black-key {
-    background-color: #3A3A3A;
+    background-color: var(--grey);
     width: 14px;
     height: 45px;
     transition: 0.1s;

@@ -27,10 +27,10 @@ const props = defineProps({
     font-size: 2em;
     margin: 0;
     margin-top: -13px;
+    color: var(--lighter-green);
   }
   p {
     margin: 0;
-    color: var(--lighter-green);
     width: 200px;
     font-weight: 300;
   }

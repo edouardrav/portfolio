@@ -6,9 +6,15 @@ import MailIcon from './icons/MailIcon.vue'
 
 <template>
   <div class="icons">
-    <LinkedinIcon />
-    <GithubIcon />
-    <MailIcon />
+    <a href="https://www.linkedin.com/in/edouardrav/" target="_blank" rel="noopener noreferrer">
+      <LinkedinIcon />
+    </a>
+    <a href="https://github.com/edouardrav" target="_blank" rel="noopener noreferrer">
+      <GithubIcon />
+    </a>
+    <a href="mailto:edravelo@gmail.com" target="_blank" rel="noopener noreferrer">
+      <MailIcon />
+    </a>
   </div>
 </template>
 
@@ -17,9 +23,19 @@ import MailIcon from './icons/MailIcon.vue'
   display: flex;
   gap: 10px;
 
-  svg {
-    fill: white;
-    width: 25px;
+
+  a {
+    svg {
+      fill: white;
+      width: 25px;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      svg {
+        fill: var(--lighter-green);
+      }
+    }
   }
 }
 </style>
