@@ -70,6 +70,7 @@ header {
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: white;
   paint-order: stroke fill;
+  text-transform: uppercase;
 }
 
 .frames {
@@ -81,6 +82,7 @@ header {
 .hi {
   margin-left: -33px;
   transform: rotate(340deg);
+  z-index: 100;
 
   h1 {
     letter-spacing: 2px;

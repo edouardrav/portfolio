@@ -1,18 +1,17 @@
 <script setup>
 import Work from './Work.vue'
+
+const props = defineProps({
+  title: String,
+});
 </script>
 
 <template>
   <div class="wrap">
-    <div class="works">
-      <Work title="musicadmin">
-        a rails app to help organize and manage music gigs
-      </Work>
-      <Work title="genearbre">
-        a rails app to manage and vizualize family trees
-      </Work>
+    <div class="category">
+      <slot></slot>
     </div>
-    <h2 class="stroke">WORKS</h2>
+    <h2 class="stroke">{{ title }}</h2>
   </div>
 </template>
 
@@ -26,14 +25,13 @@ import Work from './Work.vue'
     font-size: 3.5em;
     color: var(--darker-green);
     -webkit-text-stroke-color: var(--lighter-green);
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 3px;
     letter-spacing: 3px;
     margin-top: -10px;
-
   }
 }
 
-.works {
+.category {
   display: flex;
   flex-direction: column;
   gap: 25px;
