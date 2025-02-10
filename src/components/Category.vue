@@ -19,13 +19,28 @@ const props = defineProps({
 .wrap {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 50px;
+  overflow: hidden;
 
   h2 {
-    margin: 0;
-    font-size: 3.5em;
-    color: var(--darker-grey);
-    margin-top: -19px;
+    margin-right: 20px;
+    font-size: 5em;
+    color: var(--grey);
+    rotate: calc(360deg - var(--rotation-degree));
+    transform-origin: 100% 50%;
+    margin-bottom: -150px;
+    opacity: 0.4;
+    transition: 0.2s;
+  }
+
+  &:hover {
+    h2 {
+      /*rotate: 0deg;*/
+      transform: translateY(-30px);
+      transform-origin: 100% 50%;
+      opacity: 1;
+    }
   }
 }
 
