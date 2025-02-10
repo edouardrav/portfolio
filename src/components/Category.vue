@@ -18,7 +18,7 @@ const props = defineProps({
 <style scoped>
 .wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   gap: 50px;
   overflow: hidden;
@@ -30,7 +30,7 @@ const props = defineProps({
     rotate: calc(360deg - var(--rotation-degree));
     transform-origin: 100% 50%;
     margin-bottom: -150px;
-    opacity: 0.4;
+    opacity: 0.2;
     transition: 0.2s;
   }
 
@@ -39,7 +39,7 @@ const props = defineProps({
       /*rotate: 0deg;*/
       transform: translateY(-30px);
       transform-origin: 100% 50%;
-      opacity: 1;
+      opacity: 0.6;
     }
   }
 }

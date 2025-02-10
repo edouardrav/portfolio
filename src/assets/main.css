@@ -109,7 +109,7 @@ header {
 
   > div {
     padding-block: 100px;
-    border-bottom: 1px dotted white;
+    border-bottom: 1px solid #ffffff55;
   }
 
   p {
@@ -124,7 +124,6 @@ header {
 
   .techs {
     margin-left: 120px;
-    margin-top: 12px;
 
     p {
       font-size: 1em;
