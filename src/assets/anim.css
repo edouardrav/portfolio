@@ -28,14 +28,17 @@
 
 @keyframes animSlide {
   0% {
+    opacity: 0;
     transform: translateX(var(--init-x));
   }
 
   30% {
+    opacity: 0;
     transform: translateX(var(--init-x));
   }
 
   100% {
+    opacity: 100;
     transform: translateX(0px);
   }
 }

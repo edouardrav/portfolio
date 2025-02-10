@@ -4,6 +4,7 @@
 
 :root {
   --content-width: 900px;
+  --rotation-degree: 340deg;
   --light-green: #00CEB5;
   --darker-green: #3EBFA8;
   --lighter-green: #cefff4;
@@ -17,6 +18,7 @@
   align-items: center;
   width: 100%;
   /*border: 1px solid red;*/
+  overflow: hidden;
 }
 
 body {
@@ -72,10 +74,6 @@ header {
 }
 
 .stroke {
-  /*-webkit-text-stroke-width: 5px;*/
-  /*-webkit-text-stroke-color: white;*/
-  /*paint-order: stroke fill;*/
-  /*text-transform: uppercase;*/
   font-family: 'CabinetGrotesk-Bold';
 }
 
@@ -88,12 +86,8 @@ header {
 .hi {
   margin-left: -33px;
   margin-top: -50px;
-  transform: rotate(340deg);
+  transform: rotate(var(--rotation-degree));
   z-index: 100;
-
-  h1 {
-    letter-spacing: 2px;
-  }
 
   p {
     font-weight: bold;
@@ -108,12 +102,16 @@ header {
 }
 
 .content {
-  transform: rotate(340deg);
+  transform: rotate(var(--rotation-degree));
   display: flex;
   flex-direction: column;
-  gap: 200px;
-  margin-top: 50px;
-  /*border: 1px solid red;*/
+  gap: 100px;
+  margin-top: 150px;
+
+  > div {
+    padding-bottom: 100px;
+    border-bottom: 1px dotted white;
+  }
 
   p {
     font-size: 1.2em;

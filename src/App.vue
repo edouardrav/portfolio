@@ -27,15 +27,15 @@ import Icons from './components/Icons.vue'
     </div>
   </header>
   <div class="content">
-    <div class="me">
-      <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
-      <div class="techs">
-        <strong>ruby on rails</strong>
-        <br /><strong>vue.js</strong>
-        <br /><strong>three.js</strong>
-        <p>(and all kind of keyboards)</p>
-      </div>
-    </div>
+      <Category title="me" class="me">
+        <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
+        <div class="techs">
+          <strong>ruby on rails</strong>
+          <br /><strong>vue.js</strong>
+          <br /><strong>three.js</strong>
+          <p>(and all kind of keyboards)</p>
+        </div>
+      </Category>
     <Category title="works">
       <Work title="musicadmin">
         a rails app to help organize and manage music gigs
@@ -53,6 +53,9 @@ import Icons from './components/Icons.vue'
 </template>
 
 <style scoped>
+.me p {
+  margin-top: 0;
+}
 .contact-info {
   margin: 0;
   font-size: 1.5em;
