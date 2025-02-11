@@ -1,5 +1,5 @@
 :root {
-  --init-y: 80px;
+  --init-y: 105px;
   --init-x: -60px;
   --ease: cubic-bezier(0, .66, .28, .99);
 }
@@ -10,14 +10,17 @@
 
 @keyframes animRaise {
   0% {
+    opacity: 0;
     transform: translateY(var(--init-y));
   }
 
   10% {
+    opacity: 0;
     transform: translateY(var(--init-y));
   }
 
   100% {
+    opacity: 100;
     transform: translateY(0px);
   }
 }

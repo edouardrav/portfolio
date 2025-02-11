@@ -18,7 +18,7 @@ import Icons from './components/Icons.vue'
         <h1 class="anim-raise">Hi!</h1>
         <div class="flex">
           <div class="frames">
-            <Screen />
+            <Screen color="white" />
             <Piano />
           </div>
           <p>pianist & <br>web developer</p>
@@ -27,15 +27,17 @@ import Icons from './components/Icons.vue'
     </div>
   </header>
   <div class="content">
-    <Category title="me" class="me">
+    <Category class="me">
       <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
       <div class="techs">
-        <strong>ruby on rails</strong>
-        <br /><strong>vue.js</strong>
-        <br /><strong>three.js</strong>
+        <Screen />
+        <div>
+          <strong>ruby on rails</strong>
+          <br /><strong>vue.js</strong>
+          <br /><strong>three.js</strong>
+        </div>
       </div>
-      <p>(I can't keep my hands off of keyboards!)</p>
-      <p>In 2023 I did a web development bootcamp with <strong>Le Wagon</strong></p>
+      <p>(I can't keep my hands off of keyboards)</p>
     </Category>
     <Category title="works">
       <Works />

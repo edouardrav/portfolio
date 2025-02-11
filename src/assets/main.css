@@ -4,12 +4,22 @@
 
 :root {
   --content-width: 900px;
-  --rotation-degree: 340deg;
+  --rotation-degree: 345deg;
+
+  /* colors */
   --light-green: #00CEB5;
+  --vanilla: #FCF6B1;
+  --rusty-red: #D33F49;
+  --charcoal: #353A47;
+  --charcoal-light: #474C58;
+
   --darker-green: #3EBFA8;
   --lighter-green: #cefff4;
+  /*--almost-black: #364958;*/
+  --almost-black: #2c3130;
   --grey: #425E57;
   --darker-grey: #2D3F3A;
+
   --init-screen-width: 125px;
   --init-screen-height: 90px;
 }
@@ -19,14 +29,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /*border: 1px solid red;*/
   overflow: hidden;
 }
 
 body {
-  background: linear-gradient(0.50turn, var(--darker-green), var(--light-green));
+  /*background: linear-gradient(0.50turn, var(--darker-green), var(--light-green));*/
+  background-color: var(--vanilla);
   font-family: 'Inter', sans-serif;
-  color: white;
+  color: var(--charcoal-light);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -36,6 +46,8 @@ body {
 h1 {
   font-size: 6.5em;
   margin-top: 0;
+  letter-spacing: 3px;
+  margin-bottom: -10px;
 }
 
 p {
@@ -45,22 +57,25 @@ p {
 
 header {
   background-color: var(--light-green);
+  color: white;
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 380px;
+  height: 315px;
+  z-index: 99;
 }
 
 .headwrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   width: var(--content-width);
 }
 
 .name {
-  margin: 160px 200px 20px 0;
   font-weight: 800;
+  margin-top: 40px;
 
   p {
     margin-top: -10px;
@@ -68,11 +83,11 @@ header {
 }
 
 .rav {
-  color: var(--grey);
+  color: var(--charcoal-light);
   font-size: 8em;
-  /*letter-spacing: 3px;*/
   margin-top: -48px !important;
   margin-left: 50px !important;
+  margin-bottom: 0;
 }
 
 .stroke {
@@ -87,8 +102,11 @@ header {
 
 .hi {
   margin-left: -33px;
-  margin-top: -50px;
+  margin-top: -45px;
+  align-self: flex-start;
   transform: rotate(var(--rotation-degree));
+  /*transform-origin: 100% 100%;*/
+
   z-index: 100;
 
   p {
@@ -104,31 +122,30 @@ header {
 }
 
 .content {
+  width: 600px;
   transform: rotate(var(--rotation-degree));
+  background-color: #ffffff55;
+  padding-top: 180px;
+  margin-top: -130px;
   display: flex;
   flex-direction: column;
-  margin-left: 90px;
+  gap: 30px;
 
-  > div {
-    padding-block: 100px;
-    border-bottom: 1px solid #ffffff55;
-  }
 
   p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   strong {
-    color: var(--lighter-green);
+    font-family: 'CabinetGrotesk-Bold';
+    color: var(--charcoal);
     font-size: 1.4em;
     font-weight: 500;
   }
 
   .techs {
-    margin-left: 120px;
-
-    p {
-      font-size: 1em;
-    }
+    display: flex;
+    gap: 20px;
+    align-items: center;
   }
 }

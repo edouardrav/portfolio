@@ -39,6 +39,7 @@ const shrink = () => {
       animation: animGrow 0.2s ease forwards;
     }
   }
+
   &.close {
     .screen {
       animation: animShrink 0.2s ease forwards;
@@ -46,10 +47,11 @@ const shrink = () => {
   }
 
   h4 {
+    font-family: 'CabinetGrotesk-Bold';
     font-size: 2em;
     margin: 0;
     margin-top: -13px;
-    color: var(--lighter-green);
+    color: var(--charcoal-light);
     transition: 0.2s;
   }
 
@@ -67,7 +69,7 @@ const shrink = () => {
     cursor: pointer;
 
     h4 {
-      color: white;
+      color: var(--charcoal-light);
     }
 
     .screen {
