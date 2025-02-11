@@ -42,6 +42,7 @@
     transform: translateX(0px);
   }
 }
+
 .anim-push {
   animation: animPush 0.3s linear;
 }
@@ -54,13 +55,39 @@
   0% {
     transform: translateY(0px);
   }
+
   40% {
     transform: translateY(var(--pushing-height));
   }
+
   60% {
     transform: translateY(var(--pushing-height));
   }
+
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes animGrow {
+  0% {
+    height: var(--init-screen-height);
+    width: var(--init-screen-width);
+  }
+
+  100% {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@keyframes animShrink {
+  0% {
+    height: 200px;
+    width: 200px;
+  }
+  100% {
+    height: var(--init-screen-height);
+    width: var(--init-screen-width);
   }
 }

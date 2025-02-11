@@ -2,7 +2,7 @@
 import Piano from './components/Piano.vue'
 import Screen from './components/Screen.vue'
 import Category from './components/Category.vue'
-import Work from './components/Work.vue'
+import Works from './components/Works.vue'
 import Icons from './components/Icons.vue'
 </script>
 
@@ -38,12 +38,7 @@ import Icons from './components/Icons.vue'
       <p>In 2023 I did a web development bootcamp with <strong>Le Wagon</strong></p>
     </Category>
     <Category title="works">
-      <Work title="musicadmin">
-        a rails app to help organize and manage music gigs
-      </Work>
-      <Work title="genearbre">
-        a rails app to manage and vizualize family trees
-      </Work>
+      <Works />
     </Category>
     <Category title="contact">
       <p class="contact-info">edravelo@gmail.com</p>

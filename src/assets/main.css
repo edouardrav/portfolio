@@ -10,6 +10,8 @@
   --lighter-green: #cefff4;
   --grey: #425E57;
   --darker-grey: #2D3F3A;
+  --init-screen-width: 125px;
+  --init-screen-height: 90px;
 }
 
 #app {
