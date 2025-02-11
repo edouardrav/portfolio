@@ -37,6 +37,7 @@ const shrink = () => {
   &.open {
     .screen {
       animation: animGrow 0.2s ease forwards;
+      background-color: white;
     }
   }
 
@@ -62,18 +63,19 @@ const shrink = () => {
   }
 
   .screen {
-    transition: 0.2s;
+    transition: 0.1s;
   }
 
   &:hover {
     cursor: pointer;
 
     h4 {
-      color: var(--charcoal-light);
+      color: var(--charcoal);
     }
 
     .screen {
-      background-color: var(--light-green);
+      background-color: white;
+      width: 150px;
     }
   }
 }

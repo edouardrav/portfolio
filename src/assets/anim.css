@@ -75,7 +75,7 @@
 @keyframes animGrow {
   0% {
     height: var(--init-screen-height);
-    width: var(--init-screen-width);
+    width: 150px;
   }
 
   100% {

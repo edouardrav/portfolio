@@ -34,10 +34,14 @@ const previousIndex = ref(null)
 
 const select = (index) => {
   if (index === previousIndex.value) return
-  console.log('plop')
+
   works.value[index].classes = 'open'
   if (previousIndex.value !== null) {
     works.value[previousIndex.value].classes = 'close'
+    const previousWork = works.value[previousIndex.value]
+    setTimeout(() => {
+      previousWork.classes = ''
+    }, 200);
   }
   previousIndex.value = index
 }
