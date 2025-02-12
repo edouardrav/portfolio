@@ -30,33 +30,65 @@ import Icons from './components/Icons.vue'
     <Category class="me">
       <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
       <div class="techs">
-        <Screen />
-        <div>
-          <strong>ruby on rails</strong>
-          <br /><strong>vue.js</strong>
-          <br /><strong>three.js</strong>
-        </div>
+        <strong>ruby on rails</strong>
+        <strong>vue.js</strong>
+        <strong>three.js</strong>
       </div>
-      <p>(I can't keep my hands off of keyboards)</p>
+      <p class="tab">I can't keep my hands off of <strong>keyboards</strong>.</p>
     </Category>
     <Category title="works">
       <Works />
     </Category>
-    <Category title="contact">
+    <Category class="contact" title="contact">
       <p class="contact-info">edravelo@gmail.com</p>
-      <p class="contact-info">06 31 81 98 00</p>
       <Icons />
     </Category>
   </div>
 </template>
 
 <style scoped>
-.me p {
-  margin-top: 0;
+.me {
+  padding-bottom: 50px;
 }
-
+.tab {
+  margin-top: 50px;
+  text-align: center;
+}
 .contact-info {
   margin: 0;
   font-size: 1.5em;
+}
+
+.content {
+  width: 650px;
+  transform: rotate(var(--rotation-degree));
+  background-color: #ffffffaa;
+  padding-top: 180px;
+  margin-top: -130px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  p {
+    font-size: 1em;
+  }
+
+  strong {
+    font-family: 'CabinetGrotesk-Bold';
+    color: var(--charcoal);
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+
+  .techs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 320px;
+  }
+}
+
+.contact {
+  padding-bottom: 70px;
 }
 </style>

@@ -34,7 +34,7 @@
 
 body {
   /*background: linear-gradient(0.50turn, var(--darker-green), var(--light-green));*/
-  background-color: var(--vanilla);
+  background-color: #eee;
   font-family: 'Inter', sans-serif;
   color: var(--charcoal-light);
   margin: 0;
@@ -119,33 +119,4 @@ header {
 .flex {
   display: flex;
   gap: 10px;
-}
-
-.content {
-  width: 600px;
-  transform: rotate(var(--rotation-degree));
-  background-color: #ffffff55;
-  padding-top: 180px;
-  margin-top: -130px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-
-
-  p {
-    font-size: 1em;
-  }
-
-  strong {
-    font-family: 'CabinetGrotesk-Bold';
-    color: var(--charcoal);
-    font-size: 1.4em;
-    font-weight: 500;
-  }
-
-  .techs {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
 }
