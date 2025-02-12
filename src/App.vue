@@ -21,7 +21,7 @@ import Icons from './components/Icons.vue'
             <Screen color="white" />
             <Piano />
           </div>
-          <p>pianist & <br>web developer</p>
+          <p class="role">pianist & <br>web developer</p>
         </div>
       </div>
     </div>
@@ -67,6 +67,11 @@ import Icons from './components/Icons.vue'
     align-items: center;
     gap: 10px;
   }
+}
+
+.role {
+  font-family: 'CabinetGrotesk-ExtraBold';
+  text-shadow: -3px 4px 0px #bbb;
 }
 
 .content {
