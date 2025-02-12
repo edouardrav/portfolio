@@ -42,6 +42,7 @@ onMounted(() => {
 
   .white-key {
     background-color: white;
+    border-radius: 0 0 3px 3px;
     width: 17px;
     height: 80px;
     transition: 0.1s;
@@ -61,6 +62,7 @@ onMounted(() => {
 
   .black-key {
     background-color: var(--charcoal-light);
+    border-radius: 0 0 3px 3px;
     width: 14px;
     height: 45px;
     transition: 0.1s;

@@ -2,6 +2,7 @@
 import LinkedinIcon from './icons/LinkedinIcon.vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import MailIcon from './icons/MailIcon.vue'
+import MaltIcon from './icons/MaltIcon.vue'
 </script>
 
 <template>
@@ -12,8 +13,8 @@ import MailIcon from './icons/MailIcon.vue'
     <a href="https://github.com/edouardrav" target="_blank" rel="noopener noreferrer">
       <GithubIcon />
     </a>
-    <a href="mailto:edravelo@gmail.com" target="_blank" rel="noopener noreferrer">
-      <MailIcon />
+    <a href="https://www.malt.fr/profile/edouardrav" target="_blank" rel="noopener noreferrer">
+      <MaltIcon />
     </a>
   </div>
 </template>
@@ -22,18 +23,22 @@ import MailIcon from './icons/MailIcon.vue'
 .icons {
   display: flex;
   gap: 10px;
-
+  align-items: center;
 
   a {
     svg {
-      fill: white;
-      width: 25px;
-      transition: 0.5s;
+      fill: var(--charcoal-light);
+      width: 30px;
+      transition: 0.2s;
     }
 
     &:hover {
       svg {
-        fill: var(--lighter-green);
+        fill: var(--charcoal);
+
+        path {
+          fill: var(--lighter-green);
+        }
       }
     }
   }

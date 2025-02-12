@@ -40,8 +40,12 @@ import Icons from './components/Icons.vue'
       <Works />
     </Category>
     <Category class="contact" title="contact">
-      <p class="contact-info">edravelo@gmail.com</p>
-      <Icons />
+      <div class="center">
+        <p>You want to build something amazing? 🔥</p>
+        <p>Feel free to contact me :</p>
+        <p class="contact-info">edravelo@gmail.com</p>
+        <Icons />
+      </div>
     </Category>
   </div>
 </template>
@@ -50,16 +54,24 @@ import Icons from './components/Icons.vue'
 .me {
   padding-bottom: 50px;
 }
+
 .tab {
   margin-top: 50px;
   text-align: center;
 }
-.contact-info {
-  margin: 0;
-  font-size: 1.5em;
+
+.contact {
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .content {
+  border-radius: 0 0 10px 0;
+  overflow: hidden;
   width: 650px;
   transform: rotate(var(--rotation-degree));
   background-color: #ffffffaa;

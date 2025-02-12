@@ -23,7 +23,7 @@ defineExpose({
 
 .screen {
   border: 4px solid;
-  border-radius: 0 0 0 0;
+  border-radius: 3px;
   width: var(--init-screen-width);
   height: var(--init-screen-height);
 }
