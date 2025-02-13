@@ -4,6 +4,7 @@ import Screen from './components/Screen.vue'
 import Category from './components/Category.vue'
 import Works from './components/Works.vue'
 import Icons from './components/Icons.vue'
+import Skills from './components/Skills.vue'
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import Icons from './components/Icons.vue'
       <div class="name">
         <p>I'm</p>
         <p>EDOUARD</p>
-        <p class="rav stroke anim-slide">rav.</p>
+        <p class="rav stroke anim-slide">rav<span class="dot">.</span></p>
       </div>
       <div class="hi">
         <h1 class="anim-raise">Hi!</h1>
@@ -35,6 +36,9 @@ import Icons from './components/Icons.vue'
         <strong>three.js</strong>
       </div>
       <p class="tab">I can't keep my hands off of <strong>keyboards</strong>.</p>
+    </Category>
+    <Category title="skills">
+      <Skills />
     </Category>
     <Category title="works">
       <Works />
@@ -71,7 +75,7 @@ import Icons from './components/Icons.vue'
 
 .role {
   font-family: 'CabinetGrotesk-ExtraBold';
-  text-shadow: -3px 4px 0px #bbb;
+  text-shadow: -3px 4px 0px var(--darker-green);
 }
 
 .content {

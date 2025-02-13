@@ -20,6 +20,7 @@ const props = defineProps({
   justify-content: flex-start;
   align-items: flex-start;
   overflow: hidden;
+  padding-bottom: 80px;
   border-bottom: 1px solid #ddd;
 
   h2 {

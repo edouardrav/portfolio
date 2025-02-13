@@ -91,7 +91,11 @@ header {
 }
 
 .stroke {
-  font-family: 'CabinetGrotesk-Bold';
+  font-family: 'CabinetGrotesk-ExtraBold';
+
+  .dot {
+    font-family: 'Inter', sans-serif;
+  }
 }
 
 .frames {
