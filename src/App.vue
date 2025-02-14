@@ -36,12 +36,12 @@ import Avatar from './components/Avatar.vue'
           <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
           <div class="techs">
             <strong>ruby on rails</strong>
-            <strong class="tab">vue.js</strong>
-            <strong>three.js</strong>
+            <strong class="vue">vue.js</strong>
+            <strong class="three">three.js</strong>
           </div>
-          <p class="tab">I can't keep my hands off of <strong>keyboards</strong>.</p>
         </div>
       </div>
+      <p class="underline">I can't keep my hands off of <strong>keyboards</strong>.</p>
     </Category>
     <Category title="skills">
       <Skills />
@@ -98,30 +98,43 @@ import Avatar from './components/Avatar.vue'
     font-weight: 500;
   }
 
-  .me-wrap {
+  .me {
     display: flex;
-    align-items: center;
-  }
+    justify-content: center;
 
-  .presentation {
-
-    p {
-      margin: 0 5px;
+    .underline {
+      margin-left: 40px;
     }
 
-    .techs {
+    .me-wrap {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 5px;
-      margin: 20px;
+      align-items: flex-end;
+      gap: 30px;
 
-      .tab {
-        margin-left: 8px;
+      .presentation {
+
+        .techs {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+          margin-top: 20px;
+          margin-bottom: 0;
+
+          .vue {
+            margin-left: -10px;
+          }
+
+          .three {
+            margin-left: -25px;
+          }
+        }
       }
     }
-
   }
+
+
+
 }
 
 .contact {

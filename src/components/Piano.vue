@@ -23,7 +23,7 @@ onMounted(() => {
 <template>
   <div class="piano">
     <div class="white-keys">
-      <div v-for="i in 7" class="white-key" ref="white"></div>
+      <div v-for="i in 7" class="white-key" :style="{ 'z-index': 50 - i }" ref="white"></div>
     </div>
     <div class="black-keys">
       <div v-for="i in 5" class="black-key" ref="black"></div>
@@ -43,12 +43,14 @@ onMounted(() => {
   .white-key {
     background-color: white;
     border-radius: 0 0 3px 3px;
+    box-shadow: -3px 3px 3px #00000022;
     width: 17px;
     height: 80px;
     transition: 0.1s;
 
     &:hover {
       transform: translateY(5px);
+      box-shadow: 0px 0px 2px #00000055;
     }
   }
 
@@ -66,6 +68,7 @@ onMounted(() => {
     width: 14px;
     height: 45px;
     transition: 0.1s;
+    z-index: 60;
 
     &:hover {
       transform: translateY(5px);
