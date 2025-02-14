@@ -5,6 +5,7 @@ import Category from './components/Category.vue'
 import Works from './components/Works.vue'
 import Icons from './components/Icons.vue'
 import Skills from './components/Skills.vue'
+import Avatar from './components/Avatar.vue'
 </script>
 
 <template>
@@ -29,13 +30,18 @@ import Skills from './components/Skills.vue'
   </header>
   <div class="content">
     <Category class="me">
-      <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
-      <div class="techs">
-        <strong>ruby on rails</strong>
-        <strong>vue.js</strong>
-        <strong>three.js</strong>
+      <div class="me-wrap">
+        <Avatar />
+        <div class="presentation">
+          <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
+          <div class="techs">
+            <strong>ruby on rails</strong>
+            <strong class="tab">vue.js</strong>
+            <strong>three.js</strong>
+          </div>
+          <p class="tab">I can't keep my hands off of <strong>keyboards</strong>.</p>
+        </div>
       </div>
-      <p class="tab">I can't keep my hands off of <strong>keyboards</strong>.</p>
     </Category>
     <Category title="skills">
       <Skills />
@@ -45,7 +51,7 @@ import Skills from './components/Skills.vue'
     </Category>
     <Category class="contact" title="contact">
       <div class="center">
-        <p>You want to build something amazing? 🔥</p>
+        <p>You feel like <strong>building</strong> something <strong>amazing?</strong> 🔥</p>
         <p>Feel free to contact me :</p>
         <p class="contact-info">edravelo@gmail.com</p>
         <Icons />
@@ -55,15 +61,6 @@ import Skills from './components/Skills.vue'
 </template>
 
 <style scoped>
-.me {
-  padding-bottom: 50px;
-}
-
-.tab {
-  margin-top: 50px;
-  text-align: center;
-}
-
 .contact {
   .center {
     display: flex;
@@ -101,11 +98,29 @@ import Skills from './components/Skills.vue'
     font-weight: 500;
   }
 
-  .techs {
+  .me-wrap {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 320px;
+    align-items: center;
+  }
+
+  .presentation {
+
+    p {
+      margin: 0 5px;
+    }
+
+    .techs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      margin: 20px;
+
+      .tab {
+        margin-left: 8px;
+      }
+    }
+
   }
 }
 
