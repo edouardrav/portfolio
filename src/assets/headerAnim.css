@@ -1,0 +1,24 @@
+@keyframes header-anim {
+  0% {
+    background: var(--light-green);
+  }
+
+  10% {
+    background-color: #00000022;
+    backdrop-filter: blur(10px);
+    height: 100px;
+  }
+  100% {
+    /*background-color: #ffffff22;*/
+    background-color: #00000022;
+    backdrop-filter: blur(10px);
+    height: 100px;
+  }
+
+}
+
+.header-anim {
+  animation: header-anim linear auto both;
+  animation-timeline: scroll();
+  animation-range: 0 100%;
+}

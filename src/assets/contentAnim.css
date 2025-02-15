@@ -1,0 +1,15 @@
+@keyframes content-anim {
+  0% {
+    transform: rotate(var(--rotation-degree));
+  }
+
+  100% {
+    transform: rotate(var(--rotation-degree)) translateY(-200vh);
+  }
+}
+
+.content-anim {
+  animation: content-anim linear auto both;
+  animation-timeline: scroll();
+  animation-range: 0 100%;
+}

@@ -1,0 +1,18 @@
+@keyframes name-anim {
+  0% {}
+
+  10% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(-12px);
+  }
+
+}
+
+.name-anim {
+  animation: name-anim linear auto both;
+  animation-timeline: scroll();
+  animation-range: 0 100%;
+}

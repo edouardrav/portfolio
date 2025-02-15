@@ -9,14 +9,14 @@ import Avatar from './components/Avatar.vue'
 </script>
 
 <template>
-  <header>
+  <header class="header-anim">
     <div class="headwrap">
-      <div class="name">
-        <p>I'm</p>
-        <p>EDOUARD</p>
-        <p class="rav stroke anim-slide">rav<span class="dot">.</span></p>
+      <div class="name name-anim">
+        <p class="im-anim">I'm</p>
+        <p class="edouard-anim">EDOUARD</p>
+        <p class="rav stroke anim-slide rav-anim">rav<span class="dot">.</span></p>
       </div>
-      <div class="hi">
+      <div class="hi hi-anim">
         <h1 class="anim-raise">Hi!</h1>
         <div class="flex">
           <div class="frames">
@@ -28,7 +28,7 @@ import Avatar from './components/Avatar.vue'
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content content-anim">
     <Category class="me">
       <div class="me-wrap">
         <Avatar />
@@ -58,9 +58,14 @@ import Avatar from './components/Avatar.vue'
       </div>
     </Category>
   </div>
+  <div class="scrollable">
+  </div>
 </template>
 
 <style scoped>
+.scrollable {
+  height: 300vh;
+}
 .contact {
   .center {
     display: flex;
@@ -76,13 +81,14 @@ import Avatar from './components/Avatar.vue'
 }
 
 .content {
+  position: fixed;
   border-radius: 0 0 10px 0;
   overflow: hidden;
   width: 650px;
-  transform: rotate(var(--rotation-degree));
   background-color: #ffffffaa;
   padding-top: 180px;
-  margin-top: -130px;
+  margin-top: 150px;
+  margin-left: 360px;
   display: flex;
   flex-direction: column;
   gap: 30px;

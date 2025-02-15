@@ -1,0 +1,18 @@
+@keyframes im-anim {
+  0% {}
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+.im-anim {
+  animation: im-anim linear auto both;
+  animation-timeline: scroll();
+  animation-range: 0 100%;
+}
