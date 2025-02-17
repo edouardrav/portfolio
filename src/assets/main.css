@@ -8,6 +8,7 @@
 @import url('./im-anim.css');
 @import url('./edouard-anim.css');
 @import url('./rav-anim.css');
+@import url('./little-frames-anim.css');
 
 :root {
   --content-width: 900px;

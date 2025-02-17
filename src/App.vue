@@ -19,6 +19,10 @@ onMounted(() => {
 
 <template>
   <header class="header-anim">
+    <div class="little-frames little-frames-anim">
+      <Screen color="white" />
+      <Piano />
+    </div>
     <div class="headwrap">
       <div class="name name-anim">
         <p class="im-anim">I'm</p>
@@ -74,6 +78,16 @@ onMounted(() => {
 <style scoped>
 .scrollable {
   height: calc(1.5 * var(--content-height));
+}
+
+.little-frames {
+  position: fixed;
+  left: -15px;
+  top: -45px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: scale(0.2) rotate(var(--rotation-degree));
 }
 
 .contact {
