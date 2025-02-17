@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
+    "vercel": "^41.1.4",
     "vue": "^3.5.13"
   },
   "devDependencies": {
