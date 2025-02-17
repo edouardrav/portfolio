@@ -23,9 +23,6 @@
 @supports not (animation-timeline: scroll()) {
   .content-anim {
     transform: rotate(var(--rotation-degree));
-  }
-
-  .content-anim.scrolled {
-    transform: rotate(var(--rotation-degree)) translateY(calc(-1 * var(--content-height)));
+    transition: all 0.1s ease;
   }
 }
