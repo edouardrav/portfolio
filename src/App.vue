@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted, useTemplateRef } from 'vue'
 import Piano from './components/Piano.vue'
 import Screen from './components/Screen.vue'
 import Category from './components/Category.vue'
@@ -6,6 +7,14 @@ import Works from './components/Works.vue'
 import Icons from './components/Icons.vue'
 import Skills from './components/Skills.vue'
 import Avatar from './components/Avatar.vue'
+
+const content = useTemplateRef('content')
+
+onMounted(() => {
+  const contentHeight = content.value.clientHeight - window.innerHeight + 200
+  document.querySelector(':root').style.setProperty('--content-height', contentHeight + 'px')
+  //console.log(getComputedStyle(document.querySelector(':root')).getProperty)
+})
 </script>
 
 <template>
@@ -28,7 +37,7 @@ import Avatar from './components/Avatar.vue'
       </div>
     </div>
   </header>
-  <div class="content content-anim">
+  <div class="content content-anim" ref="content">
     <Category class="me">
       <div class="me-wrap">
         <Avatar />
@@ -64,8 +73,9 @@ import Avatar from './components/Avatar.vue'
 
 <style scoped>
 .scrollable {
-  height: 300vh;
+  height: calc(1.5 * var(--content-height));
 }
+
 .contact {
   .center {
     display: flex;
@@ -138,9 +148,6 @@ import Avatar from './components/Avatar.vue'
       }
     }
   }
-
-
-
 }
 
 .contact {

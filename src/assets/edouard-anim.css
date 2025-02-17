@@ -2,13 +2,13 @@
   0% {}
 
   10% {
-    transform: translateY(-8px);
-    font-size: 2em;
+    transform: translateY(-6px);
+    font-size: 3em;
   }
 
   100% {
-    transform: translateY(-8px);
-    font-size: 2em;
+    transform: translateY(-6px);
+    font-size: 3em;
   }
 
 }

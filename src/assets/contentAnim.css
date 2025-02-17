@@ -1,10 +1,14 @@
+:root {
+  --content-height: 0;
+}
+
 @keyframes content-anim {
   0% {
     transform: rotate(var(--rotation-degree));
   }
 
   100% {
-    transform: rotate(var(--rotation-degree)) translateY(-200vh);
+    transform: rotate(var(--rotation-degree)) translateY(calc(-1 * var(--content-height)));
   }
 }
 

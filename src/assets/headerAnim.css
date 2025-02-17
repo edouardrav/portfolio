@@ -3,15 +3,15 @@
     background: var(--light-green);
   }
 
-  10% {
-    background-color: #00000022;
-    backdrop-filter: blur(10px);
+  13% {
+    background-color: #00000015;
+    backdrop-filter: blur(20px);
     height: 100px;
   }
   100% {
     /*background-color: #ffffff22;*/
-    background-color: #00000022;
-    backdrop-filter: blur(10px);
+    background-color: #00000015;
+    backdrop-filter: blur(20px);
     height: 100px;
   }
 
