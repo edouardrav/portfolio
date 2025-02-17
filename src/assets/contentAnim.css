@@ -2,18 +2,30 @@
   --content-height: 0;
 }
 
-@keyframes content-anim {
-  0% {
-    transform: rotate(var(--rotation-degree));
+@supports (animation-timeline: scroll()) {
+  @keyframes content-anim {
+    0% {
+      transform: rotate(var(--rotation-degree));
+    }
+
+    100% {
+      transform: rotate(var(--rotation-degree)) translateY(calc(-1 * var(--content-height)));
+    }
   }
 
-  100% {
-    transform: rotate(var(--rotation-degree)) translateY(calc(-1 * var(--content-height)));
+  .content-anim {
+    animation: content-anim linear auto both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
   }
 }
 
-.content-anim {
-  animation: content-anim linear auto both;
-  animation-timeline: scroll();
-  animation-range: 0 100%;
+@supports not (animation-timeline: scroll()) {
+  .content-anim {
+    transform: rotate(var(--rotation-degree));
+  }
+
+  .content-anim.scrolled {
+    transform: rotate(var(--rotation-degree)) translateY(calc(-1 * var(--content-height)));
+  }
 }
