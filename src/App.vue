@@ -7,17 +7,18 @@ import Works from './components/Works.vue'
 import Icons from './components/Icons.vue'
 import Skills from './components/Skills.vue'
 import Avatar from './components/Avatar.vue'
+import ScrollHelper from './components/ScrollHelper.vue'
 
 const content = useTemplateRef('content')
 
 onMounted(() => {
   const contentHeight = content.value.clientHeight - window.innerHeight + 200
   document.querySelector(':root').style.setProperty('--content-height', contentHeight + 'px')
-  //console.log(getComputedStyle(document.querySelector(':root')).getProperty)
 })
 </script>
 
 <template>
+  <ScrollHelper />
   <header class="header-anim">
     <div class="little-frames little-frames-anim">
       <Screen color="white" />
@@ -87,7 +88,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  transform: scale(0.2) rotate(var(--rotation-degree));
+  /*transform: scale(0.2) rotate(var(--rotation-degree));*/
 }
 
 .contact {

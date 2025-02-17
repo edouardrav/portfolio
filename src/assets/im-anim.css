@@ -1,18 +1,30 @@
-@keyframes im-anim {
-  0% {}
+@supports (animation-timeline: scroll()) {
+  @keyframes im-anim {
+    0% {}
 
-  10% {
-    opacity: 0;
+    10% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+
   }
 
-  100% {
-    opacity: 0;
+  .im-anim {
+    animation: im-anim linear auto both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
   }
-
 }
 
-.im-anim {
-  animation: im-anim linear auto both;
-  animation-timeline: scroll();
-  animation-range: 0 100%;
+@supports not (animation-timeline: scroll()) {
+  .im-anim {
+    transition: all 0.3s ease;
+  }
+
+  .im-anim.scrolled {
+    opacity: 0;
+  }
 }

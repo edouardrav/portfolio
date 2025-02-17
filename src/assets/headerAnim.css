@@ -1,24 +1,41 @@
-@keyframes header-anim {
-  0% {
-    background: var(--light-green);
+@supports (animation-timeline: scroll()) {
+  @keyframes header-anim {
+    0% {
+      background: var(--light-green);
+    }
+
+    13% {
+      background-color: #00000015;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      height: 100px;
+    }
+
+    100% {
+      background-color: #00000015;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      height: 100px;
+    }
   }
 
-  13% {
-    background-color: #00000015;
-    backdrop-filter: blur(20px);
-    height: 100px;
+  .header-anim {
+    animation: header-anim linear auto both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
   }
-  100% {
-    /*background-color: #ffffff22;*/
-    background-color: #00000015;
-    backdrop-filter: blur(20px);
-    height: 100px;
-  }
-
 }
 
-.header-anim {
-  animation: header-anim linear auto both;
-  animation-timeline: scroll();
-  animation-range: 0 100%;
+@supports not (animation-timeline: scroll()) {
+  .header-anim {
+    background: var(--light-green);
+    transition: all 0.3s ease;
+  }
+
+  .header-anim.scrolled {
+    background-color: #00000015;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    height: 100px;
+  }
 }

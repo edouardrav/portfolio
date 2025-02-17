@@ -1,20 +1,33 @@
-@keyframes edouard-anim {
-  0% {}
+@supports (animation-timeline: scroll()) {
+  @keyframes edouard-anim {
+    0% {}
 
-  10% {
-    transform: translateY(-6px);
-    font-size: 3em;
+    10% {
+      transform: translateY(-6px);
+      font-size: 3em;
+    }
+
+    100% {
+      transform: translateY(-6px);
+      font-size: 3em;
+    }
+
   }
 
-  100% {
-    transform: translateY(-6px);
-    font-size: 3em;
+  .edouard-anim {
+    animation: edouard-anim linear auto both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
   }
-
 }
 
-.edouard-anim {
-  animation: edouard-anim linear auto both;
-  animation-timeline: scroll();
-  animation-range: 0 100%;
+@supports not (animation-timeline: scroll()) {
+  .edouard-anim {
+    transition: all 0.3s ease;
+  }
+
+  .edouard-anim.scrolled {
+    transform: translateY(-6px);
+    font-size: 3em;
+  }
 }
