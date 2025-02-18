@@ -5,11 +5,13 @@
     10% {
       opacity: 0;
       transform: translate(30px) rotate(var(--rotation-degree));
+      pointer-events: none;
     }
 
     100% {
       opacity: 0;
       transform: translate(30px) rotate(var(--rotation-degree));
+      pointer-events: none;
     }
   }
 
@@ -28,5 +30,6 @@
   .hi-anim.scrolled {
     opacity: 0;
     transform: translate(30px) rotate(var(--rotation-degree));
+    pointer-events: none;
   }
 }

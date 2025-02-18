@@ -12,7 +12,7 @@ import JSIcon from './icons/JSIcon.vue'
 const cssVars = window.getComputedStyle(document.body)
 
 const fillColor = cssVars.getPropertyValue('--charcoal')
-const bgColor = '#ddd'
+const bgColor = '#fefefe'
 </script>
 
 <template>

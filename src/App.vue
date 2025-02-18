@@ -57,7 +57,7 @@ onMounted(() => {
       </div>
       <p class="underline">I can't keep my hands off of <strong>keyboards</strong>.</p>
     </Category>
-    <Category title="skillllls">
+    <Category title="skills">
       <Skills />
     </Category>
     <Category title="works">

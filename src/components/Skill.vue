@@ -22,6 +22,17 @@ const props = defineProps({
 
   .icon {
     width: 120px;
+
+    svg {
+      border: 1px solid red;
+    }
+
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+
+     &:hover {
+      transform: scale(1.2);
+    }
   }
 
   p {
