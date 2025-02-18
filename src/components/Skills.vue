@@ -55,7 +55,7 @@ const bgColor = '#fefefe'
     display: grid;
     width: 80%;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0;
+    row-gap: 10px;
   }
 }
 </style>

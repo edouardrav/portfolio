@@ -47,7 +47,7 @@ onMounted(() => {
       <div class="me-wrap">
         <Avatar />
         <div class="presentation">
-          <p>I play <strong>jazz</strong> and I build <strong>web apps</strong> with</p>
+          <p>I play jazz and I build <strong>web apps</strong> with</p>
           <div class="techs">
             <strong>ruby on rails</strong>
             <strong class="vue">vue.js</strong>
@@ -124,9 +124,10 @@ onMounted(() => {
 
   strong {
     font-family: 'CabinetGrotesk-Bold';
+    /*font-family: 'iAQuattro-Bold';*/
     color: var(--charcoal);
-    font-size: 1.4em;
-    font-weight: 500;
+    font-size: 1.3em;
+    font-weight: 700;
   }
 
   .me {

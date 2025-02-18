@@ -32,6 +32,42 @@
   --init-screen-height: 90px;
 }
 
+@font-face {
+  font-family: 'iAQuattro';
+  src: url('/fonts/iA-Quattro/400-normal.woff') format('woff'),
+       url('/fonts/iA-Quattro/400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAQuattro-Italic';
+  src: url('/fonts/iA-Quattro/400-italic.woff') format('woff'),
+       url('/fonts/iA-Quattro/400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAQuattro-Bold';
+  src: url('/fonts/iA-Quattro/700-normal.woff') format('woff'),
+       url('/fonts/iA-Quattro/700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAQuattro-ItalicBold';
+  src: url('/fonts/iA-Quattro/700-italic.woff') format('woff'),
+       url('/fonts/iA-Quattro/700-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
 #app {
   display: flex;
   flex-direction: column;
@@ -41,7 +77,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'iAQuattro', sans-serif;
   color: var(--charcoal-light);
   margin: 0;
   /*display: flex;*/
@@ -91,6 +127,7 @@ header {
 }
 
 .name {
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   margin-top: 40px;
 
@@ -122,6 +159,7 @@ header {
 }
 
 .hi {
+  font-family: 'Inter', sans-serif;
   margin-left: -33px;
   margin-top: -45px;
   align-self: flex-start;

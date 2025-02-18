@@ -49,9 +49,10 @@ const shrink = () => {
 
   h4 {
     font-family: 'CabinetGrotesk-Bold';
-    font-size: 2em;
+    /*letter-spacing: 1px;*/
+    font-size: 1.3em;
     margin: 0;
-    margin-top: -13px;
+    margin-top: -7px;
     color: var(--charcoal-light);
     transition: 0.2s;
   }
