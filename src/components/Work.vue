@@ -4,6 +4,7 @@ import Screen from './Screen.vue'
 
 const props = defineProps({
   title: String,
+  imgUrls: Array
 });
 
 const screen = useTemplateRef('screen')
@@ -19,7 +20,7 @@ const shrink = () => {
 
 <template>
   <div class="work">
-    <Screen class="screen" ref="screen" />
+    <Screen class="screen" ref="screen" :img-urls="imgUrls" />
     <div class="info">
       <h4>{{ title }}</h4>
       <p>
@@ -31,13 +32,17 @@ const shrink = () => {
 
 <style scoped>
 .work {
+  position: relative;
   display: flex;
   gap: 20px;
 
   &.open {
     .screen {
       animation: animGrow 0.2s ease forwards;
-      background-color: white;
+
+      &::before {
+        opacity: 1;
+      }
     }
   }
 
@@ -45,6 +50,11 @@ const shrink = () => {
     .screen {
       animation: animShrink 0.2s ease forwards;
     }
+  }
+
+  img {
+    border: 1px solid red;
+    width: 100px;
   }
 
   h4 {
@@ -64,8 +74,26 @@ const shrink = () => {
   }
 
   .screen {
+    position: relative;
     transition: 0.1s;
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-image: var(--hover-img);
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+      transition: 0.1s;
+    }
   }
+
 
   &:hover {
     cursor: pointer;
@@ -75,8 +103,11 @@ const shrink = () => {
     }
 
     .screen {
-      background-color: white;
       width: 150px;
+
+      &::before {
+        opacity: 1;
+      }
     }
   }
 }

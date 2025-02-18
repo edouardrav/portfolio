@@ -1,10 +1,12 @@
 <script setup>
-import { ref, defineExpose } from 'vue'
+import { ref } from 'vue'
 
-const div = ref(null)
 const props = defineProps({
   color: String,
+  imgUrls: Array,
 });
+
+const div = ref(null)
 
 defineExpose({
   div
@@ -12,7 +14,9 @@ defineExpose({
 </script>
 
 <template>
-  <div class="screen" :style="{ 'border-color': color }" ref="div"></div>
+  <div class="screen"
+    :style="{ 'border-color': color, '--hover-img': imgUrls && `url('${imgUrls[0]}')` || 'none' }" ref="div">
+  </div>
 </template>
 
 <style scoped>
@@ -26,5 +30,6 @@ defineExpose({
   border-radius: 3px;
   width: var(--init-screen-width);
   height: var(--init-screen-height);
+  background-size: cover;
 }
 </style>
