@@ -32,16 +32,15 @@ const shrink = () => {
 
 <style scoped>
 .work {
-  position: relative;
   display: flex;
-  gap: 20px;
+  gap: 18px;
 
   &.open {
     .screen {
       animation: animGrow 0.2s ease forwards;
 
       &::before {
-        opacity: 1;
+        opacity: 1 !important;
       }
     }
   }
@@ -94,7 +93,6 @@ const shrink = () => {
     }
   }
 
-
   &:hover {
     cursor: pointer;
 
@@ -106,7 +104,7 @@ const shrink = () => {
       width: 150px;
 
       &::before {
-        opacity: 1;
+        opacity: 0.5;
       }
     }
   }
