@@ -15,31 +15,31 @@ const works = ref([
     title: 'musicadmin',
     info: 'a rails app to help organize and manage music gigs',
     imgUrls: [musicadminUrl1, musicadminUrl2],
-    classes: '',
+    opened: false,
   },
   {
     title: 'genearbre',
     info: 'a rails app to manage and vizualize family trees',
     imgUrls: [genearbreUrl1, genearbreUrl2],
-    classes: '',
+    opened: false,
   },
   {
     title: 'quizz game',
     info: 'front-end development for an agri-food client',
     imgUrls: [quizzUrl1],
-    classes: '',
+    opened: false,
   },
   {
     title: 'corn app',
     info: 'front-end development for an agri-food client',
     imgUrls: [dekalbUrl1, dekalbUrl2],
-    classes: '',
+    opened: false,
   },
   {
     title: 'portfolios',
     info: 'exciting three.js projects - more to come!',
     imgUrls: [threejsUrl1],
-    classes: '',
+    opened: false,
   }
 ])
 
@@ -48,13 +48,11 @@ const previousIndex = ref(null)
 const select = (index) => {
   if (index === previousIndex.value) return
 
-  works.value[index].classes = 'open'
+  works.value[index].opened = true
+
   if (previousIndex.value !== null) {
-    works.value[previousIndex.value].classes = 'close'
+    works.value[previousIndex.value].opened = false
     const previousWork = works.value[previousIndex.value]
-    setTimeout(() => {
-      previousWork.classes = ''
-    }, 200);
   }
   previousIndex.value = index
 }
@@ -62,7 +60,12 @@ const select = (index) => {
 
 <template>
   <div class="works">
-    <Work v-for="(work, index) in works" :title="work.title" :class="work.classes" :img-urls="work.imgUrls" @click="select(index)">
+    <Work v-for="(work, index) in works" 
+      :title="work.title"
+      :img-urls="work.imgUrls"
+      :opened="work.opened"
+      @click="select(index)"
+    >
       {{ work.info }}
     </Work>
   </div>

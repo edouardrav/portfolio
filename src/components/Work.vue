@@ -1,26 +1,58 @@
 <script setup>
-import { useTemplateRef } from 'vue'
+import { ref, watch, computed, useTemplateRef, onMounted } from 'vue'
 import Screen from './Screen.vue'
 
 const props = defineProps({
   title: String,
-  imgUrls: Array
+  imgUrls: {
+    type: Array,
+    required: true,
+  },
+  opened: {
+    type: Boolean,
+    required: true
+  }
 });
+const classes = ref('')
 
 const screen = useTemplateRef('screen')
+const currentImgIndex = ref(0)
+let carouselTimeout
+const carouselDelay = 1000
 
-const grow = (event) => {
-  screen.value.div.classList.add('anim-grow')
+function updateImg() {
+  if (props.imgUrls.length === 1) return
+
+  currentImgIndex.value += 1
+  if (currentImgIndex.value > props.imgUrls.length - 1) {
+    currentImgIndex.value = 0
+  }
+  carouselTimeout = setTimeout(() => {
+    props.opened && props.imgUrls.length > 1 && updateImg()
+  }, carouselDelay);
 }
 
-const shrink = () => {
-  screen.value.div.classList.add('anim-shrink')
-}
+watch(() => props.opened,
+  (opened) => {
+    opened ? classes.value = 'open' : classes.value = 'close'
+    if (opened) {
+      carouselTimeout = setTimeout(() => {
+        updateImg()
+      }, carouselDelay)
+    } else {
+      clearTimeout(carouselTimeout)
+      currentImgIndex.value = 0
+    }
+  });
+
+const currentImgUrl = computed(() => {
+  return `url(${props.imgUrls[currentImgIndex.value]})`
+})
 </script>
 
 <template>
-  <div class="work">
-    <Screen class="screen" ref="screen" :img-urls="imgUrls" />
+  <div :class="['work', classes]">
+    <Screen class="screen" ref="screen" :style="{ '--hover-img': currentImgUrl }" />
     <div class="info">
       <h4>{{ title }}</h4>
       <p>

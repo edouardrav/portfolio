@@ -3,7 +3,6 @@ import { ref } from 'vue'
 
 const props = defineProps({
   color: String,
-  imgUrls: Array,
 });
 
 const div = ref(null)
@@ -14,8 +13,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="screen"
-    :style="{ 'border-color': color, '--hover-img': imgUrls && `url('${imgUrls[0]}')` || 'none' }" ref="div">
+  <div class="screen" :style="{ 'border-color': color  }" ref="div">
   </div>
 </template>
 
@@ -30,6 +28,6 @@ defineExpose({
   border-radius: 3px;
   width: var(--init-screen-width);
   height: var(--init-screen-height);
-  background-size: cover;
+  background-size: contain;
 }
 </style>
