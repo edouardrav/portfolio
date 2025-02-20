@@ -30,6 +30,8 @@
 
   --init-screen-width: 125px;
   --init-screen-height: 90px;
+  --grow-screen-width: 400px;
+  --grow-screen-height: 300px;
 }
 
 @font-face {

@@ -75,20 +75,21 @@
 @keyframes animGrow {
   0% {
     height: var(--init-screen-height);
-    width: 150px;
+    width: 150;
   }
 
   100% {
-    height: 200px;
-    width: 300px;
+    height: var(--grow-screen-height);
+    width: var(--grow-screen-width);
   }
 }
 
 @keyframes animShrink {
   0% {
-    height: 200px;
-    width: 300px;
+    height: var(--grow-screen-height);
+    width: var(--grow-screen-width);
   }
+
   100% {
     height: var(--init-screen-height);
     width: var(--init-screen-width);

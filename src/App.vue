@@ -13,6 +13,8 @@ const content = useTemplateRef('content')
 
 onMounted(() => {
   const contentHeight = content.value.clientHeight - window.innerHeight + 200
+  console.log(content.value.clientHeight)
+  console.log(window.innerHeight)
   document.querySelector(':root').style.setProperty('--content-height', contentHeight + 'px')
 })
 </script>
@@ -106,13 +108,15 @@ onMounted(() => {
 }
 
 .content {
+  border: 1px solid #aaa;
+  box-shadow: -3px 3px 3px #00000022;
   position: fixed;
   border-radius: 0 0 10px 0;
   overflow: hidden;
-  width: 650px;
+  width: 780px;
   background-color: #ffffffaa;
-  padding-top: 180px;
-  margin-top: 150px;
+  padding-top: 200px;
+  margin-top: 130px;
   margin-left: 360px;
   display: flex;
   flex-direction: column;

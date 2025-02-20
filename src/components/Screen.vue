@@ -18,11 +18,6 @@ defineExpose({
 </template>
 
 <style scoped>
-:root {
-  --init-screen-width: 125px;
-  --init-screen-height: 90px;
-}
-
 .screen {
   border: 4px solid;
   border-radius: 3px;
