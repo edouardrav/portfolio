@@ -45,6 +45,9 @@ const updateHeader = () => {
     const domElement = document.querySelector('.' + animableElement)
     if (scrollPercentage >= headerYAnimationTrigger) {
       domElement.classList.add('scrolled')
+      if (animableElement === 'rav-anim') {
+        domElement.classList.remove('anim-slide')
+      }
     } else if (scrollPercentage < headerYAnimationTrigger) {
       domElement.classList.remove('scrolled')
     }
