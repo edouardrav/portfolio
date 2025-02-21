@@ -10,17 +10,34 @@ import Avatar from './components/Avatar.vue'
 import ScrollHelper from './components/ScrollHelper.vue'
 
 const content = useTemplateRef('content')
+const scrollHelper = useTemplateRef('scrollHelper')
+let resizeObserver = null
 
 onMounted(() => {
-  const contentHeight = content.value.clientHeight - window.innerHeight + 200
-  console.log(content.value.clientHeight)
-  console.log(window.innerHeight)
-  document.querySelector(':root').style.setProperty('--content-height', contentHeight + 'px')
+  updateContentPosition()
+
+  resizeObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      updateContentPosition()
+    }
+  })
+  resizeObserver.observe(content.value)
 })
+
+window.addEventListener('resize', () => {
+  updateContentPosition()
+})
+
+const updateContentPosition = () => {
+  const result = (content.value.offsetHeight - window.innerHeight) * 1.05 + 200
+  document.querySelector(':root').style.setProperty('--content-translate-y', `-${result}px`)
+  console.log(result)
+  scrollHelper.value.updateContentTransform()
+}
 </script>
 
 <template>
-  <ScrollHelper />
+  <ScrollHelper ref="scrollHelper" />
   <header class="header-anim">
     <div class="little-frames little-frames-anim">
       <Screen color="white" />

@@ -12,6 +12,7 @@
 
 :root {
   --content-width: 900px;
+  --content-height: 1700px;
   --rotation-degree: 345deg;
 
   /* colors */
