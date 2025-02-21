@@ -47,7 +47,9 @@ const updateContentPosition = () => {
       <div class="name name-anim">
         <p class="im-anim">I'm</p>
         <p class="edouard-anim">EDOUARD</p>
-        <p class="rav stroke anim-slide rav-anim">rav<span class="dot">.</span></p>
+        <div class="rav-wrap rav-anim">
+          <p class="rav stroke anim-slide">rav<span class="dot">.</span></p>
+        </div>
       </div>
       <div class="hi hi-anim">
         <h1 class="anim-raise">Hi!</h1>

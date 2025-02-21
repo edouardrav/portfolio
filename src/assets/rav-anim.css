@@ -1,13 +1,13 @@
 @supports (animation-timeline: scroll()) {
   @keyframes rav-anim {
     10% {
-      transform: translate(190px, -40px);
-      font-size: 4.5em;
+      transform: scale(0.52) translate(305px, -145px);
+      /*font-size: 4.5em;*/
     }
 
     100% {
-      transform: translate(190px, -40px);
-      font-size: 4.5em;
+      transform: scale(0.52) translate(305px, -145px);
+      /*font-size: 4.5em;*/
     }
   }
 
@@ -24,7 +24,6 @@
   }
 
   .rav-anim.scrolled {
-    transform: translate(190px, -40px);
-    font-size: 4.5em;
+    transform: scale(0.52) translate(305px, -145px);
   }
 }
