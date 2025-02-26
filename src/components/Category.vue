@@ -19,7 +19,6 @@ const props = defineProps({
 .wrap {
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: hidden;
   padding-bottom: 80px;
   border-bottom: 1px solid #ddd;
 
@@ -27,11 +26,11 @@ const props = defineProps({
     margin: 0;
     font-size: 3em;
     text-align: right;
-    margin-right: -8px;
+    margin-right: 20px;
     color: var(--darker-green);
-    transform-origin: 100% 50%;
-    transition: 0.2s;
-    text-shadow: -3px 3px 0px #ddd;
+    /*transform-origin: 100% 50%;*/
+    /*transition: 0.2s;*/
+    text-shadow: -3px 3px 0px #ccc;
   }
 
   .category {

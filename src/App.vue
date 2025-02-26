@@ -139,7 +139,7 @@ const updateContentPosition = () => {
   margin-left: 360px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 8px;
 
   p {
     font-size: 1em;
