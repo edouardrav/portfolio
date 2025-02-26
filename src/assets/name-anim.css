@@ -8,6 +8,7 @@
 
     100% {
       transform: translateY(25px);
+      pointer-events: none;
     }
 
   }

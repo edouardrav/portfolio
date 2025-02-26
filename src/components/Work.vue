@@ -81,7 +81,7 @@ const currentImgUrl = computed(() => {
         <slot></slot>
       </p>
       <div class="details hide" ref="detailsWrap">
-        <p v-for="detail in details" ref="details">{{ detail }}</p>
+        <p v-for="detail in details" ref="details">› {{ detail }}</p>
       </div>
     </div>
   </div>
@@ -130,7 +130,7 @@ const currentImgUrl = computed(() => {
   }
 
   .details {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -141,6 +141,7 @@ const currentImgUrl = computed(() => {
 
     p {
       font-family: 'iAQuattro-Italic';
+      color: var(--charcoal);
       opacity: 0;
 
       &.detailsAnim {
