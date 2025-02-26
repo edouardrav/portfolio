@@ -29,7 +29,7 @@ window.addEventListener('resize', () => {
 })
 
 const updateContentPosition = () => {
-  const result = (content.value.offsetHeight - window.innerHeight) * 1.05 + 200
+  const result = (content.value.offsetHeight - window.innerHeight) * 1.05 + 100
   document.querySelector(':root').style.setProperty('--content-translate-y', `-${result}px`)
   console.log(result)
   scrollHelper.value.updateContentTransform()

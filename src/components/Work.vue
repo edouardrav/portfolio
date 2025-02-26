@@ -4,6 +4,7 @@ import Screen from './Screen.vue'
 
 const props = defineProps({
   title: String,
+  details: Array,
   imgUrls: {
     type: Array,
     required: true,
@@ -32,6 +33,11 @@ function updateImg() {
   }, carouselDelay);
 }
 
+const detailsWrap = useTemplateRef("detailsWrap")
+const detailsItems = useTemplateRef('details')
+let detailsTimeout
+const detailsDelay = 300
+
 watch(() => props.opened,
   (opened) => {
     opened ? classes.value = 'open' : classes.value = 'close'
@@ -39,15 +45,31 @@ watch(() => props.opened,
       carouselTimeout = setTimeout(() => {
         updateImg()
       }, carouselDelay)
+      detailsTimeout = setTimeout(() => {
+        detailsWrap.value.classList.remove("hide")
+        for (let i = 0; i < detailsItems.value.length; i++) {
+          const detail = detailsItems.value[i]
+          setTimeout(() => {
+            detail.classList.add("detailsAnim")
+          }, 100 * i);
+        }
+      }, detailsDelay);
     } else {
       clearTimeout(carouselTimeout)
       currentImgIndex.value = 0
+      clearTimeout(detailsTimeout)
+      for (const detail of detailsItems.value) {
+        detail.classList.remove("detailsAnim")
+      }
+      detailsWrap.value.classList.add("hide")
     }
-  });
+  }
+)
 
 const currentImgUrl = computed(() => {
   return `url(${props.imgUrls[currentImgIndex.value]})`
 })
+
 </script>
 
 <template>
@@ -58,6 +80,9 @@ const currentImgUrl = computed(() => {
       <p>
         <slot></slot>
       </p>
+      <div class="details hide" ref="detailsWrap">
+        <p v-for="detail in details" ref="details">{{ detail }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -102,6 +127,26 @@ const currentImgUrl = computed(() => {
     margin: 0;
     width: 200px;
     font-size: 1em;
+  }
+
+  .details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &.hide {
+      display: none !important;
+    }
+
+    p {
+      font-family: 'iAQuattro-Italic';
+      opacity: 0;
+
+      &.detailsAnim {
+        animation: detailsAnim 0.2s ease forwards;
+      }
+    }
   }
 
   .screen {

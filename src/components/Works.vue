@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import Work from './Work.vue'
+
 import musicadminUrl1 from '../assets/img/works/musicadmin1.png'
 import musicadminUrl2 from '../assets/img/works/musicadmin2.png'
 import genearbreUrl1 from '../assets/img/works/genearbre1.png'
@@ -15,30 +16,56 @@ const works = ref([
     title: 'musicadmin',
     info: 'a rails app to help organize and manage music gigs',
     imgUrls: [musicadminUrl1, musicadminUrl2],
+    details: [
+      '› Stimulus.js',
+      '› Hotwire',
+      '› Turbo',
+      '› PostgreSQL',
+    ],
     opened: false,
   },
   {
     title: 'genearbre',
     info: 'a rails app to manage and vizualize family trees',
     imgUrls: [genearbreUrl1, genearbreUrl2],
+    details: [
+      '- CRUD stuff',
+      '- SQL injections',
+      '- Ruby on Rails is fire',
+    ],
     opened: false,
   },
   {
     title: 'quizz game',
     info: 'front-end development for an agri-food client',
     imgUrls: [quizzUrl1],
+    details: [
+      '- CRUD stuff',
+      '- SQL injections',
+      '- Ruby on Rails is fire',
+    ],
     opened: false,
   },
   {
     title: 'corn app',
     info: 'front-end development for an agri-food client',
     imgUrls: [dekalbUrl1, dekalbUrl2],
+    details: [
+      '- CRUD stuff',
+      '- SQL injections',
+      '- Ruby on Rails is fire',
+    ],
     opened: false,
   },
   {
     title: 'portfolios',
     info: 'exciting three.js projects - more to come!',
     imgUrls: [threejsUrl1],
+    details: [
+      '- CRUD stuff',
+      '- SQL injections',
+      '- Ruby on Rails is fire',
+    ],
     opened: false,
   }
 ])
@@ -60,12 +87,8 @@ const select = (index) => {
 
 <template>
   <div class="works">
-    <Work v-for="(work, index) in works" 
-      :title="work.title"
-      :img-urls="work.imgUrls"
-      :opened="work.opened"
-      @click="select(index)"
-    >
+    <Work v-for="(work, index) in works" :title="work.title" :img-urls="work.imgUrls" :opened="work.opened"
+      :details="work.details" @click="select(index)">
       {{ work.info }}
     </Work>
   </div>
