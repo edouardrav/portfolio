@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('./cabinet-grotesk.css');
+
+@font-face {
+  font-family: 'iAQuattro';
+  src: url('/fonts/iA-Quattro/400-normal.woff') format('woff'),
+    url('/fonts/iA-Quattro/400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAQuattro-Italic';
+  src: url('/fonts/iA-Quattro/400-italic.woff') format('woff'),
+    url('/fonts/iA-Quattro/400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAQuattro-Bold';
+  src: url('/fonts/iA-Quattro/700-normal.woff') format('woff'),
+    url('/fonts/iA-Quattro/700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iAQuattro-ItalicBold';
+  src: url('/fonts/iA-Quattro/700-italic.woff') format('woff'),
+    url('/fonts/iA-Quattro/700-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}

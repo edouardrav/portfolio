@@ -51,9 +51,14 @@ const bgColor = '#fefefe'
   display: flex;
   justify-content: center;
 
+  @media (min-width: 576px) {
+    .wrap {
+      width: 80%;
+    }
+  }
+
   .wrap {
     display: grid;
-    width: 80%;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 10px;
   }

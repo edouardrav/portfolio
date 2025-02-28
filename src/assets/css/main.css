@@ -1,6 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('./cabinet-grotesk.css');
+@import url('./fonts.css');
 
 /* COMPONENTS */
 @import url('./header.css');
@@ -22,6 +21,16 @@
   --content-width: 900px;
   --content-height: 1700px;
 
+  @media (min-width: 576px) {
+    --rotation-degree: 345deg;
+    --content-margin-bottom: 100;
+  }
+
+  @media (max-width: 576px) {
+    --rotation-degree: 0deg;
+    --content-margin-bottom: -8;
+  }
+
   /* colors */
   --light-green: #00CEB5;
   --vanilla: #FCF6B1;
@@ -41,52 +50,6 @@
   --grow-screen-width: 400px;
   --grow-screen-height: 300px;
 }
-@media (min-width: 576px) {
-  :root {
-    --rotation-degree: 345deg;
-  }
-}
-@media (max-width: 576px) {
-  :root {
-    --rotation-degree: 0deg;
-  }
-}
-
-@font-face {
-  font-family: 'iAQuattro';
-  src: url('/fonts/iA-Quattro/400-normal.woff') format('woff'),
-    url('/fonts/iA-Quattro/400-normal.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'iAQuattro-Italic';
-  src: url('/fonts/iA-Quattro/400-italic.woff') format('woff'),
-    url('/fonts/iA-Quattro/400-italic.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'iAQuattro-Bold';
-  src: url('/fonts/iA-Quattro/700-normal.woff') format('woff'),
-    url('/fonts/iA-Quattro/700-normal.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'iAQuattro-ItalicBold';
-  src: url('/fonts/iA-Quattro/700-italic.woff') format('woff'),
-    url('/fonts/iA-Quattro/700-italic.woff2') format('woff2');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
 
 #app {
   display: flex;
@@ -103,7 +66,7 @@ body {
 }
 
 .body-bg {
-  background: url('../assets/img/mesh-gradient.png') no-repeat;
+  background: url('../img/mesh-gradient.png') no-repeat;
   background-size: cover;
   position: fixed;
   top: 0;
@@ -124,7 +87,6 @@ p {
   font-size: 3em;
   margin-bottom: 0;
 }
-
 
 .stroke {
   font-family: 'CabinetGrotesk-ExtraBold';

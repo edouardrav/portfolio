@@ -21,7 +21,13 @@ const props = defineProps({
   align-items: center;
 
   .icon {
-    width: 120px;
+    @media (min-width: 576px) {
+      width: 120px;
+    }
+
+    @media (max-width: 576px) {
+      width: 90px;
+    }
 
     svg {
       border: 1px solid red;
@@ -30,7 +36,7 @@ const props = defineProps({
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
 
-     &:hover {
+    &:hover {
       transform: scale(1.2);
     }
   }

@@ -15,6 +15,13 @@ header {
   z-index: 99;
 }
 
+.header-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle 600px at 100px -200px, #45C255, var(--light-green));
+}
+
 .headwrap {
   display: flex;
   justify-content: space-between;

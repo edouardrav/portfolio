@@ -9,8 +9,19 @@ const imgUrl = imgAvatar
 </template>
 
 <style scoped>
+@media (min-width: 576px) {
+  img.avatar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  img.avatar {
+    width: 120px;
+  }
+}
+
 img.avatar {
-  width: 200px;
   border-radius: 50%;
   transform: rotate(10deg);
 }

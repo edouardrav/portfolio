@@ -29,9 +29,10 @@ window.addEventListener('resize', () => {
 })
 
 const updateContentPosition = () => {
-  const result = (content.value.offsetHeight - window.innerHeight) * 1.05 + 100
+  const contentMarginBottom = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--content-margin-bottom'));
+  console.log(contentMarginBottom)
+  const result = (content.value.offsetHeight - window.innerHeight) * 1.05 + contentMarginBottom
   document.querySelector(':root').style.setProperty('--content-translate-y', `-${result}px`)
-  console.log(result)
   scrollHelper.value.updateContentTransform()
 }
 </script>
@@ -100,13 +101,6 @@ const updateContentPosition = () => {
 </template>
 
 <style scoped>
-.header-bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle 600px at 100px -200px, #45C255, var(--light-green));
-}
-
 .scrollable {
   height: calc(1.5 * var(--content-height));
 }
@@ -128,26 +122,27 @@ const updateContentPosition = () => {
 @media (min-width: 576px) {
   .content {
     width: 780px;
-  }
-}
-@media (max-width: 576px) {
-  .content {
-    width: 100%;
+    margin-left: 360px;
+    margin-top: 130px;
   }
 }
 
+@media (max-width: 576px) {
+  .content {
+    width: 95%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
 
 .content {
   border: 1px solid #aaa;
   box-shadow: -3px 3px 3px #00000022;
   position: fixed;
-  border-radius: 0 0 10px 0;
+  border-radius: 0 0 10px 10px;
   overflow: hidden;
-  /*width: 780px;*/
   background-color: #ffffffaa;
   padding-top: 200px;
-  margin-top: 130px;
-  margin-left: 360px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -168,13 +163,25 @@ const updateContentPosition = () => {
     display: flex;
     justify-content: center;
 
-    .underline {
-      margin-left: 40px;
+
+    @media (min-width: 576px) {
+      .underline {
+        margin-left: 40px;
+      }
+
+      .me-wrap {
+        align-items: flex-end;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .me-wrap {
+        align-items: center;
+      }
     }
 
     .me-wrap {
       display: flex;
-      align-items: flex-end;
       gap: 30px;
 
       .presentation {
