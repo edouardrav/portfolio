@@ -111,16 +111,6 @@ const updateContentPosition = () => {
   height: calc(1.5 * var(--content-height));
 }
 
-.little-frames {
-  position: fixed;
-  left: -15px;
-  top: -45px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  /*transform: scale(0.2) rotate(var(--rotation-degree));*/
-}
-
 .contact {
   .center {
     display: flex;
@@ -135,13 +125,25 @@ const updateContentPosition = () => {
   text-shadow: -3px 4px 0px var(--darker-green);
 }
 
+@media (min-width: 576px) {
+  .content {
+    width: 780px;
+  }
+}
+@media (max-width: 576px) {
+  .content {
+    width: 100%;
+  }
+}
+
+
 .content {
   border: 1px solid #aaa;
   box-shadow: -3px 3px 3px #00000022;
   position: fixed;
   border-radius: 0 0 10px 0;
   overflow: hidden;
-  width: 780px;
+  /*width: 780px;*/
   background-color: #ffffffaa;
   padding-top: 200px;
   margin-top: 130px;

@@ -1,20 +1,26 @@
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('cabinet-grotesk.css');
-@import url('./anim.css');
-@import url('./headerAnim.css');
-@import url('./contentAnim.css');
-@import url('./hiAnim.css');
-@import url('./name-anim.css');
-@import url('./im-anim.css');
-@import url('./edouard-anim.css');
-@import url('./rav-anim.css');
-@import url('./little-frames-anim.css');
-@import url('./details-anim.css');
+@import url('./cabinet-grotesk.css');
+
+/* COMPONENTS */
+@import url('./header.css');
+@import url('./little-frames.css');
+
+/* ANIMATIONS */
+@import url('./animations/anim.css');
+@import url('./animations/headerAnim.css');
+@import url('./animations/contentAnim.css');
+@import url('./animations/hiAnim.css');
+@import url('./animations/name-anim.css');
+@import url('./animations/im-anim.css');
+@import url('./animations/edouard-anim.css');
+@import url('./animations/rav-anim.css');
+@import url('./animations/little-frames-anim.css');
+@import url('./animations/details-anim.css');
 
 :root {
   --content-width: 900px;
   --content-height: 1700px;
-  --rotation-degree: 345deg;
 
   /* colors */
   --light-green: #00CEB5;
@@ -35,11 +41,21 @@
   --grow-screen-width: 400px;
   --grow-screen-height: 300px;
 }
+@media (min-width: 576px) {
+  :root {
+    --rotation-degree: 345deg;
+  }
+}
+@media (max-width: 576px) {
+  :root {
+    --rotation-degree: 0deg;
+  }
+}
 
 @font-face {
   font-family: 'iAQuattro';
   src: url('/fonts/iA-Quattro/400-normal.woff') format('woff'),
-       url('/fonts/iA-Quattro/400-normal.woff2') format('woff2');
+    url('/fonts/iA-Quattro/400-normal.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -48,7 +64,7 @@
 @font-face {
   font-family: 'iAQuattro-Italic';
   src: url('/fonts/iA-Quattro/400-italic.woff') format('woff'),
-       url('/fonts/iA-Quattro/400-italic.woff2') format('woff2');
+    url('/fonts/iA-Quattro/400-italic.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -57,7 +73,7 @@
 @font-face {
   font-family: 'iAQuattro-Bold';
   src: url('/fonts/iA-Quattro/700-normal.woff') format('woff'),
-       url('/fonts/iA-Quattro/700-normal.woff2') format('woff2');
+    url('/fonts/iA-Quattro/700-normal.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -66,7 +82,7 @@
 @font-face {
   font-family: 'iAQuattro-ItalicBold';
   src: url('/fonts/iA-Quattro/700-italic.woff') format('woff'),
-       url('/fonts/iA-Quattro/700-italic.woff2') format('woff2');
+    url('/fonts/iA-Quattro/700-italic.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -84,9 +100,6 @@ body {
   font-family: 'iAQuattro', sans-serif;
   color: var(--charcoal-light);
   margin: 0;
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*align-items: center;*/
 }
 
 .body-bg {
@@ -112,74 +125,12 @@ p {
   margin-bottom: 0;
 }
 
-header {
-  background: #00000015;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  position: fixed;
-  color: white;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 290px;
-  z-index: 99;
-}
-
-.headwrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  width: var(--content-width);
-}
-
-.name {
-  z-index: 99;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  margin-top: 40px;
-
-  p {
-    margin-top: -10px;
-  }
-}
-
-.rav {
-  color: var(--charcoal-light);
-  font-size: 8em;
-  margin-top: -48px !important;
-  margin-left: 50px !important;
-  margin-bottom: 0;
-}
 
 .stroke {
   font-family: 'CabinetGrotesk-ExtraBold';
 
   .dot {
     font-family: 'Inter', sans-serif;
-  }
-}
-
-.frames {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
-
-.hi {
-  font-family: 'Inter', sans-serif;
-  margin-left: -33px;
-  margin-top: -45px;
-  align-self: flex-start;
-  transform: rotate(var(--rotation-degree));
-  /*transform-origin: 100% 100%;*/
-
-  z-index: 100;
-
-  p {
-    font-weight: bold;
-    margin: 45px 2px;
-    line-height: 1.05em;
   }
 }
 

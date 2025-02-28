@@ -2,12 +2,12 @@
 
   @keyframes little-frames-anim {
     0% {
-      transform: scale(0.2) rotate(var(--rotation-degree)) translateY(-200px);
+      transform: scale(0.2) rotate(var(--head-rotation-degree)) translateY(-200px);
       opacity: 0;
     }
 
     5% {
-      transform: scale(0.2) rotate(var(--rotation-degree)) translateY(-200px);
+      transform: scale(0.2) rotate(var(--head-rotation-degree)) translateY(-200px);
       opacity: 0;
     }
 
@@ -16,12 +16,12 @@
     }
 
     13% {
-      transform: scale(0.2) rotate(var(--rotation-degree));
+      transform: scale(0.2) rotate(var(--head-rotation-degree));
       opacity: 1;
     }
 
     100% {
-      transform: scale(0.2) rotate(var(--rotation-degree));
+      transform: scale(0.2) rotate(var(--head-rotation-degree));
     }
 
   }
@@ -36,12 +36,12 @@
 @supports not (animation-timeline: scroll()) {
   .little-frames-anim {
     opacity: 0;
-    transform: scale(0.2) rotate(var(--rotation-degree)) translateY(-200px);
+    transform: scale(0.2) rotate(var(--head-rotation-degree)) translateY(-200px);
     transition: all 0.3s ease;
   }
 
   .little-frames-anim.scrolled {
-    transform: scale(0.2) rotate(var(--rotation-degree));
+    transform: scale(0.2) rotate(var(--head-rotation-degree));
     opacity: 1;
   }
 }

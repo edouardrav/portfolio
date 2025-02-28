@@ -1,0 +1,45 @@
+:root {
+  --name-final-y: 25px;
+  --name-final-x: 0px;
+  --name-final-scale: 1;
+}
+
+@media (max-width: 576px) {
+  :root {
+    --name-final-scale: 0.6 !important;
+    --name-final-y: 13px !important;
+    --name-final-x: 50px !important;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  @keyframes name-anim {
+    0% {}
+
+    10% {
+      transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
+    }
+
+    100% {
+      transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
+      pointer-events: none;
+    }
+  }
+
+  .name-anim {
+    animation: name-anim linear auto both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+  }
+}
+
+
+@supports not (animation-timeline: scroll()) {
+  .name-anim {
+    transition: all 0.3s ease;
+  }
+
+  .name-anim.scrolled {
+    transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
+  }
+}

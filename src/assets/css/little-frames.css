@@ -1,0 +1,19 @@
+.little-frames {
+  position: fixed;
+  top: -45px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /*transform: scale(0.2) rotate(var(--rotation-degree));*/
+}
+
+@media (min-width: 576px) {
+  .little-frames {
+    left: -15px;
+  }
+}
+@media (max-width: 576px) {
+  .little-frames {
+    right: 0
+  }
+}
