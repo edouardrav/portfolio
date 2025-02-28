@@ -176,7 +176,7 @@ const updateContentPosition = () => {
 
     @media (max-width: 576px) {
       .me-wrap {
-        align-items: center;
+        align-items: flex-start;
       }
     }
 
@@ -191,15 +191,36 @@ const updateContentPosition = () => {
           flex-direction: column;
           align-items: flex-start;
           gap: 5px;
-          margin-top: 20px;
+
+          @media (min-width: 576px) {
+            margin-top: 20px;
           margin-bottom: 0;
+          }
+
+          @media (max-width: 576px) {
+            margin-top: 50px;
+          margin-bottom: 20px;
+          }
+
 
           .vue {
-            margin-left: -10px;
+            @media (min-width: 576px) {
+              margin-left: -10px;
+            }
+
+            @media (max-width: 576px) {
+              margin-left: -20px;
+            }
           }
 
           .three {
-            margin-left: -25px;
+            @media (min-width: 576px) {
+              margin-left: -25px;
+            }
+
+            @media (max-width: 576px) {
+              margin-left: -45px;
+            }
           }
         }
       }

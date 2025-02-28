@@ -59,7 +59,15 @@ const bgColor = '#fefefe'
 
   .wrap {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     row-gap: 10px;
   }
 }

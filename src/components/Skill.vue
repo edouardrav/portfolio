@@ -21,13 +21,7 @@ const props = defineProps({
   align-items: center;
 
   .icon {
-    @media (min-width: 576px) {
       width: 120px;
-    }
-
-    @media (max-width: 576px) {
-      width: 90px;
-    }
 
     svg {
       border: 1px solid red;
