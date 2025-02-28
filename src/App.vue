@@ -39,6 +39,8 @@ const updateContentPosition = () => {
 <template>
   <ScrollHelper ref="scrollHelper" />
   <header class="header-anim">
+    <div class="header-bg header-bg-anim">
+    </div>
     <div class="little-frames little-frames-anim">
       <Screen color="white" />
       <Piano />
@@ -98,6 +100,13 @@ const updateContentPosition = () => {
 </template>
 
 <style scoped>
+.header-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle 600px at 100px -200px, #45C255, var(--light-green));
+}
+
 .scrollable {
   height: calc(1.5 * var(--content-height));
 }

@@ -3,6 +3,7 @@ import { onMounted } from 'vue'
 
 const headerAnimableElements = [
   'header-anim',
+  'header-bg-anim',
   'hi-anim',
   'rav-anim',
   'name-anim',

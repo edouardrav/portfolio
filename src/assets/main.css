@@ -113,6 +113,9 @@ p {
 }
 
 header {
+  background: #00000015;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   position: fixed;
   color: white;
   width: 100%;
@@ -131,6 +134,7 @@ header {
 }
 
 .name {
+  z-index: 99;
   font-family: 'Inter', sans-serif;
   font-weight: 800;
   margin-top: 40px;

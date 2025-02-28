@@ -1,12 +1,22 @@
+:root {
+  --final-x: 280px;
+  --final-y: -144px;
+  --final-scale: 0.52;
+}
+
 @supports (animation-timeline: scroll()) {
   @keyframes rav-anim {
+    0% {
+      transform: translate(-13px, -8px);
+    }
+
     10% {
-      transform: scale(0.52) translate(305px, -145px);
+      transform: scale(var(--final-scale)) translate(var(--final-x), var(--final-y));
       /*font-size: 4.5em;*/
     }
 
     100% {
-      transform: scale(0.52) translate(305px, -145px);
+      transform: scale(var(--final-scale)) translate(var(--final-x), var(--final-y));
       /*font-size: 4.5em;*/
     }
   }
@@ -21,9 +31,10 @@
 @supports not (animation-timeline: scroll()) {
   .rav-anim {
     transition: all 0.3s ease;
+    transform: translate(-13px, -8px);
   }
 
   .rav-anim.scrolled {
-    transform: scale(0.52) translate(305px, -145px);
+    transform: scale(var(--final-scale)) translate(var(--final-x), var(--final-y));
   }
 }

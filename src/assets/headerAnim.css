@@ -1,21 +1,21 @@
 @supports (animation-timeline: scroll()) {
   @keyframes header-anim {
-    0% {
-      background: var(--light-green);
-    }
-
     13% {
-      background-color: #00000015;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       height: 100px;
     }
 
     100% {
-      background-color: #00000015;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       height: 100px;
+    }
+  }
+
+  @keyframes header-bg-anim {
+    13% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
     }
   }
 
@@ -24,18 +24,29 @@
     animation-timeline: scroll();
     animation-range: 0 100%;
   }
+
+  .header-bg-anim {
+    animation: header-bg-anim linear auto both;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
+  }
 }
 
 @supports not (animation-timeline: scroll()) {
   .header-anim {
-    background: var(--light-green);
+    transition: all 0.3s ease;
+  }
+
+  .header-bg-anim {
     transition: all 0.3s ease;
   }
 
   .header-anim.scrolled {
-    background-color: #00000015;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     height: 100px;
+  }
+
+  .header-bg-anim.scrolled {
+    /*border: 2px solid red;*/
+    opacity: 0;
   }
 }
