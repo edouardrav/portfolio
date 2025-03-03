@@ -21,14 +21,20 @@
   --content-width: 900px;
   --content-height: 1700px;
 
-  @media (min-width: 576px) {
+  /* DESKTOP */
+  @media (min-width: 992px) {
     --rotation-degree: 345deg;
     --content-margin-bottom: 100;
   }
-
+  /* TABLET */
+  @media (min-width: 576px) and (max-width: 992px) {
+    --rotation-degree: 0deg;
+    --content-margin-bottom: 95;
+  }
+  /* MOBILE */
   @media (max-width: 576px) {
     --rotation-degree: 0deg;
-    --content-margin-bottom: -8;
+    --content-margin-bottom: -20;
   }
 
   /* colors */

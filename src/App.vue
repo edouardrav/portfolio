@@ -119,17 +119,26 @@ const updateContentPosition = () => {
   text-shadow: -3px 4px 0px var(--darker-green);
 }
 
-@media (min-width: 576px) {
+/* DESKTOP */
+@media (min-width: 992px) {
   .content {
     width: 780px;
     margin-left: 360px;
     margin-top: 130px;
   }
 }
-
+/* TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+  .content {
+    width: calc(100% - 80px);
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+}
+/* MOBILE */
 @media (max-width: 576px) {
   .content {
-    width: 95%;
+    width: calc(100% - 20px);
     margin-top: 50px;
     margin-bottom: 50px;
   }

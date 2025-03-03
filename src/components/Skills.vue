@@ -60,11 +60,11 @@ const bgColor = '#fefefe'
   .wrap {
     display: grid;
 
-    @media (min-width: 576px) {
+    @media (min-width: 715px) {
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 715px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
