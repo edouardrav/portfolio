@@ -1,21 +1,30 @@
-:root {
-  --name-final-y: 25px;
-  --name-final-x: 0px;
-  --name-final-scale: 1;
-}
-
+/* MOBILE */
 @media (max-width: 576px) {
   :root {
-    --name-final-scale: 0.6 !important;
-    --name-final-y: 13px !important;
-    --name-final-x: 50px !important;
+    --name-final-scale: 0.6;
+    --name-final-y: 13px;
+    --name-final-x: 50px;
+  }
+}
+/* TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+  :root {
+    --name-final-y: 25px;
+    --name-final-x: 40px;
+    --name-final-scale: 1;
+  }
+}
+/* DESKTOP */
+@media (min-width: 992px) {
+  :root {
+    --name-final-y: 25px;
+    --name-final-x: 0px;
+    --name-final-scale: 1;
   }
 }
 
 @supports (animation-timeline: scroll()) {
   @keyframes name-anim {
-    0% {}
-
     10% {
       transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
     }

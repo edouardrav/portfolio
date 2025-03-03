@@ -1,9 +1,14 @@
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   :root {
     --hi-scale: 1;
   }
 }
 
+@media (max-width: 992px) {
+  :root {
+    --hi-scale: 0.7;
+  }
+}
 @media (max-width: 576px) {
   :root {
     --hi-scale: 0.5;

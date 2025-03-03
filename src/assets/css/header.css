@@ -30,6 +30,7 @@ header {
   width: var(--content-width);
 }
 
+/* MOBILE */
 @media (max-width: 576px) {
   header {
     height: 200px;
@@ -40,15 +41,32 @@ header {
   }
 
   .hi {
-    margin-top: -88px !important;
-    margin-left: -140px !important;
-    transform: scale(0.5) rotate(var(--head-rotation-degree));
+    margin-top: -88px;
+    margin-left: -140px;
   }
 }
 
-@media (min-width: 576px) {
+/* TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+  header {
+    height: 270px;
+  }
+
+  .name {
+    transform: scale(0.8) translateX(80px);
+  }
+
   .hi {
-    transform: rotate(var(--head-rotation-degree));
+    margin-top: -55px;
+    /*margin-left: -200px;*/
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .hi {
+    margin-left: -33px;
+    margin-top: -45px;
   }
 }
 
@@ -77,10 +95,9 @@ header {
   gap: 13px;
 }
 
+
 .hi {
   font-family: 'Inter', sans-serif;
-  margin-left: -33px;
-  margin-top: -45px;
   align-self: flex-start;
   /*transform-origin: 100% 100%;*/
 
