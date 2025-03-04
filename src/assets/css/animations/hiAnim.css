@@ -9,6 +9,7 @@
     --hi-scale: 0.7;
   }
 }
+
 @media (max-width: 576px) {
   :root {
     --hi-scale: 0.5;
@@ -43,12 +44,13 @@
 
 @supports not (animation-timeline: scroll()) {
   .hi-anim {
+    transform: scale(var(--hi-scale)) rotate(var(--head-rotation-degree));
     transition: all 0.3s ease;
   }
 
   .hi-anim.scrolled {
     opacity: 0;
-      transform: scale(var(--hi-scale)) translate(30px) rotate(var(--head-rotation-degree));
+    transform: scale(var(--hi-scale)) translate(30px) rotate(var(--head-rotation-degree));
     pointer-events: none;
   }
 }
