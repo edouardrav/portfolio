@@ -6,6 +6,7 @@
     --name-final-x: 50px;
   }
 }
+
 /* TABLET */
 @media (min-width: 576px) and (max-width: 992px) {
   :root {
@@ -14,6 +15,7 @@
     --name-final-scale: 1;
   }
 }
+
 /* DESKTOP */
 @media (min-width: 992px) {
   :root {
@@ -27,10 +29,12 @@
   @keyframes name-anim {
     10% {
       transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
+      pointer-events: none;
     }
 
     100% {
       transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
+      pointer-events: none;
       pointer-events: none;
     }
   }
@@ -50,5 +54,6 @@
 
   .name-anim.scrolled {
     transform: scale(var(--name-final-scale)) translate(var(--name-final-x), var(--name-final-y));
+    pointer-events: none;
   }
 }
