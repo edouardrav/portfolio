@@ -26,11 +26,13 @@
     --rotation-degree: 345deg;
     --content-margin-bottom: 100;
   }
+
   /* TABLET */
   @media (min-width: 576px) and (max-width: 992px) {
     --rotation-degree: 0deg;
     --content-margin-bottom: 95;
   }
+
   /* MOBILE */
   @media (max-width: 576px) {
     --rotation-degree: 0deg;
@@ -54,7 +56,14 @@
   --init-screen-width: 125px;
   --init-screen-height: 90px;
   --grow-screen-width: 400px;
+  @media (max-width: 576px) {
+    --grow-screen-width: 100%;
+  }
   --grow-screen-height: 300px;
+  --details-delay: 300;
+  @media (max-width: 576px) {
+    --details-delay: 0;
+  }
 }
 
 #app {
@@ -72,7 +81,7 @@ body {
 }
 
 .body-bg {
-  background: url('../img/mesh-gradient.png') no-repeat;
+  background: url('../img/Pente 3.png') no-repeat;
   background-size: cover;
   position: fixed;
   top: 0;

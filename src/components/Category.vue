@@ -27,10 +27,10 @@ const props = defineProps({
     font-size: 3em;
     text-align: right;
     margin-right: 20px;
-    color: var(--darker-green);
+    color: var(--light-green);
     /*transform-origin: 100% 50%;*/
     /*transition: 0.2s;*/
-    text-shadow: -3px 3px 0px #ccc;
+    text-shadow: -3px 3px 0px #00000015;
   }
 
   .category {

@@ -36,7 +36,7 @@ function updateImg() {
 const detailsWrap = useTemplateRef("detailsWrap")
 const detailsItems = useTemplateRef('details')
 let detailsTimeout
-const detailsDelay = 300
+const detailsDelay = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--details-delay'));
 
 watch(() => props.opened,
   (opened) => {
@@ -96,6 +96,15 @@ const currentImgUrl = computed(() => {
   gap: 18px;
 
   &.open {
+    @media (max-width: 576px) {
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      .info {
+        margin-left: 5px;
+      }
+    }
+
     .screen {
       animation: animGrow 0.2s ease forwards;
 
