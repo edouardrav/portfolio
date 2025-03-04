@@ -55,6 +55,9 @@ watch(() => props.opened,
         }
       }, detailsDelay);
     } else {
+      setTimeout(() => {
+        classes.value = ''
+      }, 220);
       clearTimeout(carouselTimeout)
       currentImgIndex.value = 0
       clearTimeout(detailsTimeout)
@@ -98,6 +101,11 @@ const currentImgUrl = computed(() => {
 
       &::before {
         opacity: 1 !important;
+        filter: grayscale(0%) !important;
+        -webkit-filter: grayscale(0%) !important;
+        -moz-filter: grayscale(0%) !important;
+        -ms-filter: grayscale(0%) !important;
+        -o-filter: grayscale(0%) !important;
       }
     }
   }
@@ -168,6 +176,12 @@ const currentImgUrl = computed(() => {
       background-position: 50% 0;
       background-size: cover;
       transition: 0.1s;
+
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
     }
   }
 
@@ -182,7 +196,7 @@ const currentImgUrl = computed(() => {
       width: 150px;
 
       &::before {
-        opacity: 0.5;
+        opacity: 1;
       }
     }
   }
