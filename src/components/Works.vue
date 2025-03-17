@@ -2,14 +2,14 @@
 import { ref } from 'vue'
 import Work from './Work.vue'
 
-import musicadminUrl1 from '../assets/img/works/musicadmin1.png'
-import musicadminUrl2 from '../assets/img/works/musicadmin2.png'
-import genearbreUrl1 from '../assets/img/works/genearbre1.png'
-import genearbreUrl2 from '../assets/img/works/genearbre2.png'
-import dekalbUrl1 from '../assets/img/works/dekalb1.png'
-import dekalbUrl2 from '../assets/img/works/dekalb2.png'
-import quizzUrl1 from '../assets/img/works/quizz1.png'
-import artistsportfolioUrl1 from '../assets/img/works/artistsportfolio.png'
+import musicadminUrl1 from '../assets/img/works/musicadmin1.webp'
+import musicadminUrl2 from '../assets/img/works/musicadmin2.webp'
+import genearbreUrl1 from '../assets/img/works/genearbre1.webp'
+import genearbreUrl2 from '../assets/img/works/genearbre2.webp'
+import dekalbUrl1 from '../assets/img/works/dekalb1.webp'
+import dekalbUrl2 from '../assets/img/works/dekalb2.webp'
+import quizzUrl1 from '../assets/img/works/quizz1.webp'
+import artistsportfolioUrl1 from '../assets/img/works/artistsportfolio.webp'
 
 const works = ref([
   {
