@@ -170,6 +170,7 @@ const currentImgUrl = computed(() => {
   .screen {
     position: relative;
     transition: 0.1s;
+    -webkit-transition: 0.1s;
 
     &::before {
       content: ' ';
@@ -185,6 +186,7 @@ const currentImgUrl = computed(() => {
       background-position: 50% 0;
       background-size: cover;
       transition: 0.1s;
+      -webkit-transition: 0.1s;
 
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
